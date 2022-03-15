@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+package controller.controls;
+
+/**
+ * @author Mario Gabriel Núñez Alcázar de Velasco
+ */
+public interface Keyboard {
+
+}

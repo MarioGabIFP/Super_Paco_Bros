@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package view.graphics;
+
+import view.Graphics;
+
+/**
+ *  @author Mario Gabriel Núñez Alcázar de Velasco
+ */
+public class Renderable extends Graphics {
+
+}

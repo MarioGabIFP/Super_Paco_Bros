@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package controller.controls;
+
+import static org.lwjgl.glfw.GLFW.GLFW_KEY_ESCAPE;
+import static org.lwjgl.glfw.GLFW.GLFW_RELEASE;
+import static org.lwjgl.glfw.GLFW.glfwSetKeyCallback;
+import static org.lwjgl.glfw.GLFW.glfwSetWindowShouldClose;
+
+/**
+ * @author Mario Gabriel Núñez Alcázar de Velasco
+ */
+public interface Keyboard {
+	static void capture(long window) {
+		/*
+		 * Configura la captura del teclado
+		 * Se llamará cada vez que se presione, repita o suelte una tecla.
+		 */
+		glfwSetKeyCallback(window, (window, key, scancode, action, mods) -> {
+			/******************************************************
+			 * Aquí configuraremos los controles del Juego.********
+			 ******************************************************/
+			// Si pulsamos la tecla ESC (Escape), se cerrará la ventana.
+			if ( key == GLFW_KEY_ESCAPE && action == GLFW_RELEASE ) glfwSetWindowShouldClose(window, true);
+		});
+	}
+}
