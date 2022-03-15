@@ -24,7 +24,7 @@ import static org.lwjgl.glfw.GLFW.*;
 /**
  *  <strong>Motor del Juego</strong>.
  *  
- *  <br><br>Es el principal rey y señor del Paco Bros, sin el, nada funcionaría :).
+ *  Es el principal rey y señor del Paco Bros, sin el, nada funcionaría :).
  *  
  *  @author Mario Gabriel Núñez Alcázar de Velasco
  */

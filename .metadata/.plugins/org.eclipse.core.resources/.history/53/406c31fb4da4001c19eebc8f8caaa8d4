@@ -22,7 +22,7 @@ public interface Keyboard {
 	 * 
 	 * Este método se encarga de capturar los eventos del teclado y les asigna una acción.
 	 * 
-	 * (similar a eventListener de JS).
+	 * (similar a onClick de JS).
 	 * 
 	 * @param win
 	 */

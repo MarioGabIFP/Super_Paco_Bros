@@ -18,11 +18,6 @@ import static org.lwjgl.glfw.GLFW.glfwSetWindowShouldClose;
 public interface Keyboard {
 	
 	/**
-	 * <strong>Captura de Teclado</string>
-	 * 
-	 * Este método se encarga de capturar los eventos del teclado y les asigna una acción.
-	 * 
-	 * (similar a eventListener de JS).
 	 * 
 	 * @param win
 	 */

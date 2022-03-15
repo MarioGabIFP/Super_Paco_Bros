@@ -27,12 +27,11 @@ import java.nio.IntBuffer;
 import org.lwjgl.glfw.GLFWErrorCallback;
 import org.lwjgl.glfw.GLFWVidMode;
 import org.lwjgl.system.MemoryStack;
+
 import controller.controls.Keyboard;
 
 /**
- * <strong>Entorno Jugable</strong>.
- * 
- * <br><br>Carga y controla el entorno de la pantalla donde sucedera la acción :).
+ * <strong>Carga y control de Graficos</strong>.
  * 
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */

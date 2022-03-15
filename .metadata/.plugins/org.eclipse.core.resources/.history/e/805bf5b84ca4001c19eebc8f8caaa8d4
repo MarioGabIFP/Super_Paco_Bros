@@ -11,18 +11,12 @@ import static org.lwjgl.glfw.GLFW.glfwSetWindowShouldClose;
 /**
  * <strong>Controles por teclado del Juego</strong>.
  * 
- * <br><br>Interfaz que implementa los controles del juego con el teclado.
- * 
+ * Interfaz que implementa los controles del juego con el teclado.
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */
 public interface Keyboard {
 	
 	/**
-	 * <strong>Captura de Teclado</string>
-	 * 
-	 * Este método se encarga de capturar los eventos del teclado y les asigna una acción.
-	 * 
-	 * (similar a eventListener de JS).
 	 * 
 	 * @param win
 	 */

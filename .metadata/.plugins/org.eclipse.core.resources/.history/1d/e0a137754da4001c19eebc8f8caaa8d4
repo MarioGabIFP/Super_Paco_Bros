@@ -8,7 +8,7 @@ package view;
  *  
  * 	<br><br>Interfaz donde renderizamos los graficos.
  * 
- *  @author Mario Gabriel Núñez Alcázar de Velasco.
+ *  @author Mario Gabriel Núñez Alcázar de Velasco
  */
 public interface Pictures {
 	enum action {

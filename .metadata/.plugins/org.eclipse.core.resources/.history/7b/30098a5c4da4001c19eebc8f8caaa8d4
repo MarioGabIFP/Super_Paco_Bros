@@ -4,11 +4,11 @@
 package view;
 
 /**
- *  <strong>Renderizado de Graficos</strong>.
+ *  <strong>Imagenes y graficos propios del juego</strong>.
  *  
- * 	<br><br>Interfaz donde renderizamos los graficos.
+ * 	<br><br>Interfaz donde almacenaremos los graficos recurrentes (Ej. Bloques, Jugadores, enemigos).
  * 
- *  @author Mario Gabriel Núñez Alcázar de Velasco.
+ *  @author Mario Gabriel Núñez Alcázar de Velasco
  */
 public interface Pictures {
 	enum action {
