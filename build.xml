@@ -5,27 +5,27 @@
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. --><project basedir="." default="build" name="Super_Paco_Bros">
     <property environment="env"/>
-    <property name="ECLIPSE_HOME" value="../../../../../eclipse/java-2021-09/eclipse/"/>
+    <property name="ECLIPSE_HOME" value="../../../../eclipse/java-2021-09/eclipse/"/>
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="16"/>
     <property name="source" value="16"/>
     <path id="Super_Paco_Bros.classpath">
-        <pathelement location="bin"/>
-        <pathelement location="src/libary/lwjgl.jar"/>
-        <pathelement location="src/libary/lwjgl-glfw.jar"/>
-        <pathelement location="src/libary/lwjgl-opengl.jar"/>
-        <pathelement location="src/libary/lwjgl-natives-windows.jar"/>
-        <pathelement location="src/libary/lwjgl-glfw-natives-windows.jar"/>
-        <pathelement location="src/libary/lwjgl-opengl-natives-windows.jar"/>
+        <pathelement location="Super_Paco_Bros/bin"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl-glfw.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl-opengl.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl-natives-windows.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl-glfw-natives-windows.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl-opengl-natives-windows.jar"/>
     </path>
     <path id="run.Motor.classpath">
         <path refid="Super_Paco_Bros.classpath"/>
-        <pathelement location="src/libary/lwjgl.jar"/>
-        <pathelement location="src/libary/lwjgl-glfw.jar"/>
-        <pathelement location="src/libary/lwjgl-opengl.jar"/>
-        <pathelement location="src/libary/lwjgl-natives-windows.jar"/>
-        <pathelement location="src/libary/lwjgl-glfw-natives-windows.jar"/>
-        <pathelement location="src/libary/lwjgl-opengl-natives-windows.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl-glfw.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl-opengl.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl-natives-windows.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl-glfw-natives-windows.jar"/>
+        <pathelement location="Super_Paco_Bros/src/libary/lwjgl-opengl-natives-windows.jar"/>
     </path>
     <target name="init">
         <mkdir dir="bin"/>
