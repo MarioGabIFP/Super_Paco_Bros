@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package view;
+
+/**
+ * @author mario
+ *
+ */
+public interface Frames {
+	enum action {
+		NEW
+	}
+	
+	/**
+	 * <strong>Método abstracto para manejar el remnderizado de los Frames</strong>
+	 */
+	public void Frame(action accion);
+}

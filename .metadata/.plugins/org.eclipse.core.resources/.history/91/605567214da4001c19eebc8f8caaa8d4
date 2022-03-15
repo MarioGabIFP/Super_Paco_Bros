@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package view;
+
+/**
+ * 	Interfaz donde almacenaremos los graficos recurrentes (Ej. Bloques, Jugadores, enemigos)
+ *  @author Mario Gabriel Núñez Alcázar de Velasco
+ */
+public interface Pictures {
+	enum action {
+		NEW
+	}
+	
+	/**
+	 * <strong>Método abstracto para manejar el remnderizado de los Frames</strong>
+	 */
+	public void Frame(action accion);
+}

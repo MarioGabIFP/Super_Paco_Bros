@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package view.graphics;
+
+import view.Graphics;
+
+/**
+ * @author mario
+ *
+ */
+public class Renderable extends Graphics {
+
+}

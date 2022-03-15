@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package controller.controls;
+
+/**
+ * @author mario
+ *
+ */
+public interface Keyboard {
+
+}
