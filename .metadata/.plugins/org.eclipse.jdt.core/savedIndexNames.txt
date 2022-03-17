@@ -4,7 +4,6 @@ INDEX VERSION 1.131+C:\Users\mario\Documents\GitHub\MarioGabIFP\Super_Paco_Bros\
 3852782152.index
 1865797976.index
 2520539685.index
-1276214057.index
 3732478496.index
 3863974383.index
 1642175237.index
