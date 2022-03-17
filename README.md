@@ -1,5 +1,6 @@
 # Super_Paco_Bros
 Práctica en grupo de Programación del 3º Trimestre de DAM.
+<<<<<<< HEAD
 
 ## Recursos externos utilizados:
 - LWJGL: Lightweight Java Game Library
@@ -8,3 +9,5 @@ Práctica en grupo de Programación del 3º Trimestre de DAM.
 
 ## Documentación:
 [LWJGL](https://javadoc.lwjgl.org")
+=======
+>>>>>>> master
