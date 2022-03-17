@@ -1,18 +1,3 @@
-/**
- * Recursos externos utilizados:
- * <br>
- * <ul>
- * <li><strong>LWJGL</strong>: Lightweight Java Game Library</li>
- * <li><strong>LWJGL OpenGL</strong>: Renderizador de graficos de LWJGL basado en OpenGL</li>
- * <li><strogn>LWJGL GLFW</strong>: Controlador de graficos de LWJGL basado en OpenGL</li>
- * </ul>
- * 
- * Documentación:
- * <br>
- * <ul>
- * <li><a href="https://javadoc.lwjgl.org"><strong>LWJGL</strong></a></li>
- * </ul>
- */
 package controller;
 
 import org.lwjgl.opengl.*;

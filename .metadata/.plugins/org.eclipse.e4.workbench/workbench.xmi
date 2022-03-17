@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_5NQ08KSJEeyGX96ZKBbKnA" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_5NQ08aSJEeyGX96ZKBbKnA" bindingContexts="_5NSEc6SJEeyGX96ZKBbKnA">
+<<<<<<< HEAD
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Motor.java&quot; tooltip=&quot;Super_Paco_Bros/src/controller/Motor.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/controller/Motor.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Pictures.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/Pictures.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/Pictures.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Keyboard.java&quot; tooltip=&quot;Super_Paco_Bros/src/controller/controls/Keyboard.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/controller/controls/Keyboard.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Environment.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/Environment.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/Environment.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Graphics.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/graphics/Graphics.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/graphics/Graphics.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditorNoSource&quot; name=&quot;GL.class&quot; tooltip=&quot;org.lwjgl.opengl.GL&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Super_Paco_Bros/src\/libary\/lwjgl-opengl.jar&amp;lt;org.lwjgl.opengl(GL.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Renderable.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/graphics/Renderable.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/graphics/Renderable.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Graphics.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/Graphics.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/Graphics.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Frames.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/Frames.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/Frames.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditorNoSource&quot; name=&quot;GLFW.class&quot; tooltip=&quot;org.lwjgl.glfw.GLFW&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Super_Paco_Bros/src\/libary\/lwjgl-glfw.jar&amp;lt;org.lwjgl.glfw(GLFW.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditorNoSource&quot; name=&quot;MemoryStack.class&quot; tooltip=&quot;org.lwjgl.system.MemoryStack&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Super_Paco_Bros/src\/libary\/lwjgl.jar&amp;lt;org.lwjgl.system(MemoryStack.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PacoMotor.java&quot; tooltip=&quot;Super_Paco_Bros/src/controller/PacoMotor.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/controller/PacoMotor.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditorNoSource&quot; name=&quot;GL11.class&quot; tooltip=&quot;org.lwjgl.opengl.GL11&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Super_Paco_Bros/src\/libary\/lwjgl-opengl.jar&amp;lt;org.lwjgl.opengl(GL11.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Main.java&quot; tooltip=&quot;Super_Paco_Bros/src/controller/Main.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/controller/Main.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+=======
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Pictures.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/Pictures.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/Pictures.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Keyboard.java&quot; tooltip=&quot;Super_Paco_Bros/src/controller/controls/Keyboard.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/controller/controls/Keyboard.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Motor.java&quot; tooltip=&quot;Super_Paco_Bros/src/controller/Motor.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/controller/Motor.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Environment.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/Environment.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/Environment.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Graphics.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/graphics/Graphics.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/graphics/Graphics.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditorNoSource&quot; name=&quot;GL.class&quot; tooltip=&quot;org.lwjgl.opengl.GL&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Super_Paco_Bros/src\/libary\/lwjgl-opengl.jar&amp;lt;org.lwjgl.opengl(GL.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Renderable.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/graphics/Renderable.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/graphics/Renderable.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Graphics.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/Graphics.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/Graphics.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Frames.java&quot; tooltip=&quot;Super_Paco_Bros/src/view/Frames.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/view/Frames.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditorNoSource&quot; name=&quot;GLFW.class&quot; tooltip=&quot;org.lwjgl.glfw.GLFW&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Super_Paco_Bros/src\/libary\/lwjgl-glfw.jar&amp;lt;org.lwjgl.glfw(GLFW.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditorNoSource&quot; name=&quot;MemoryStack.class&quot; tooltip=&quot;org.lwjgl.system.MemoryStack&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Super_Paco_Bros/src\/libary\/lwjgl.jar&amp;lt;org.lwjgl.system(MemoryStack.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PacoMotor.java&quot; tooltip=&quot;Super_Paco_Bros/src/controller/PacoMotor.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/controller/PacoMotor.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.jdt.ui.ClassFileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.ClassFileEditorNoSource&quot; name=&quot;GL11.class&quot; tooltip=&quot;org.lwjgl.opengl.GL11&quot;>&#xD;&#xA;&lt;persistable org.eclipse.jdt.ui.ClassFileIdentifier=&quot;=Super_Paco_Bros/src\/libary\/lwjgl-opengl.jar&amp;lt;org.lwjgl.opengl(GL11.class&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Main.java&quot; tooltip=&quot;Super_Paco_Bros/src/controller/Main.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/Super_Paco_Bros/src/controller/Main.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+>>>>>>> master
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_5NQ08aSJEeyGX96ZKBbKnA" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_5NQ08qSJEeyGX96ZKBbKnA" label="%trimmedwindow.label.eclipseSDK" x="224" y="224" width="1024" height="768">
     <persistedState key="coolBarVisible" value="true"/>
@@ -196,7 +200,11 @@
           <tags>persp.actionSet:org.eclipse.egit.ui.SearchActionSet</tags>
           <tags>persp.newWizSC:org.eclipse.egit.ui.CreateRepositoryWizard</tags>
           <tags>persp.showIn:org.eclipse.tm.terminal.view.ui.TerminalsView</tags>
+<<<<<<< HEAD
+          <children xsi:type="basic:PartSashContainer" xmi:id="_X6Tv0aU0EeyyG-LFYAy6wQ" selectedElement="_X6Tv16U0EeyyG-LFYAy6wQ" horizontal="true">
+=======
           <children xsi:type="basic:PartSashContainer" xmi:id="_X6Tv0aU0EeyyG-LFYAy6wQ" selectedElement="_X6Tv0qU0EeyyG-LFYAy6wQ" horizontal="true">
+>>>>>>> master
             <children xsi:type="basic:PartSashContainer" xmi:id="_X6Tv0qU0EeyyG-LFYAy6wQ" containerData="3000" selectedElement="_X6Tv06U0EeyyG-LFYAy6wQ">
               <children xsi:type="basic:PartStack" xmi:id="_X6Tv06U0EeyyG-LFYAy6wQ" elementId="org.eclipse.egit.ui.RepositoriesViewMStack" containerData="7000" selectedElement="_X6Tv1KU0EeyyG-LFYAy6wQ">
                 <children xsi:type="advanced:Placeholder" xmi:id="_X6Tv1KU0EeyyG-LFYAy6wQ" elementId="org.eclipse.egit.ui.RepositoriesView" ref="_5NRc9KSJEeyGX96ZKBbKnA" closeable="true">
@@ -212,9 +220,15 @@
                 </children>
               </children>
             </children>
+<<<<<<< HEAD
+            <children xsi:type="basic:PartSashContainer" xmi:id="_X6Tv16U0EeyyG-LFYAy6wQ" containerData="7000" selectedElement="_X6Tv2aU0EeyyG-LFYAy6wQ">
+              <children xsi:type="advanced:Placeholder" xmi:id="_X6Tv2KU0EeyyG-LFYAy6wQ" elementId="org.eclipse.ui.editorss" containerData="5000" ref="_5NRcp6SJEeyGX96ZKBbKnA"/>
+              <children xsi:type="basic:PartStack" xmi:id="_X6Tv2aU0EeyyG-LFYAy6wQ" elementId="bottom" containerData="5000" selectedElement="_X6Tv3KU0EeyyG-LFYAy6wQ">
+=======
             <children xsi:type="basic:PartSashContainer" xmi:id="_X6Tv16U0EeyyG-LFYAy6wQ" containerData="7000">
               <children xsi:type="advanced:Placeholder" xmi:id="_X6Tv2KU0EeyyG-LFYAy6wQ" elementId="org.eclipse.ui.editorss" containerData="5000" ref="_5NRcp6SJEeyGX96ZKBbKnA"/>
               <children xsi:type="basic:PartStack" xmi:id="_X6Tv2aU0EeyyG-LFYAy6wQ" elementId="bottom" containerData="5000" selectedElement="_X6Tv2qU0EeyyG-LFYAy6wQ">
+>>>>>>> master
                 <children xsi:type="advanced:Placeholder" xmi:id="_X6Tv2qU0EeyyG-LFYAy6wQ" elementId="org.eclipse.team.ui.GenericHistoryView" ref="_X6RTkKU0EeyyG-LFYAy6wQ" closeable="true">
                   <tags>View</tags>
                   <tags>categoryTag:Version Control (Team)</tags>
@@ -596,18 +610,42 @@
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.team.internal.ui.synchronize.SynchronizeView"/>
       <tags>View</tags>
       <tags>categoryTag:Version Control (Team)</tags>
+<<<<<<< HEAD
+      <menus xmi:id="__oDjQKXrEeynVJcCUTx2Zg" elementId="org.eclipse.team.sync.views.SynchronizeView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="__oDjQaXrEeynVJcCUTx2Zg" elementId="org.eclipse.team.sync.views.SynchronizeView" visible="false"/>
+=======
+>>>>>>> master
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_X6R6oaU0EeyyG-LFYAy6wQ" elementId="org.eclipse.egit.ui.StagingView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Git Staging" iconURI="platform:/plugin/org.eclipse.egit.ui/icons/eview16/staging.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.egit.ui"/>
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.egit.ui.internal.staging.StagingView"/>
       <tags>View</tags>
       <tags>categoryTag:Git</tags>
+<<<<<<< HEAD
+      <menus xmi:id="_-U6gYKXrEeynVJcCUTx2Zg" elementId="org.eclipse.egit.ui.StagingView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_-U6gYaXrEeynVJcCUTx2Zg" elementId="org.eclipse.egit.ui.StagingView" visible="false"/>
+=======
+>>>>>>> master
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_X6R6oqU0EeyyG-LFYAy6wQ" elementId="org.eclipse.egit.ui.ReflogView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Git Reflog" iconURI="platform:/plugin/org.eclipse.egit.ui/icons/eview16/reflog.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.egit.ui"/>
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.egit.ui.internal.reflog.ReflogView"/>
       <tags>View</tags>
       <tags>categoryTag:Git</tags>
+<<<<<<< HEAD
+      <menus xmi:id="__-higKXrEeynVJcCUTx2Zg" elementId="org.eclipse.egit.ui.ReflogView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="__-higaXrEeynVJcCUTx2Zg" elementId="org.eclipse.egit.ui.ReflogView" visible="false"/>
+=======
+>>>>>>> master
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_X6R6o6U0EeyyG-LFYAy6wQ" elementId="org.eclipse.ui.views.PropertySheet" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Properties" iconURI="platform:/plugin/org.eclipse.ui.views/icons/full/eview16/prop_ps.png" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.views"/>
@@ -679,7 +717,11 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5NRdC6SJEeyGX96ZKBbKnA" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
+<<<<<<< HEAD
+        <children xsi:type="menu:HandledToolItem" xmi:id="_J0pvkKXrEeynVJcCUTx2Zg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_5NT6v6SJEeyGX96ZKBbKnA"/>
+=======
         <children xsi:type="menu:HandledToolItem" xmi:id="_RhqLsKU0EeyyG-LFYAy6wQ" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_5NT6v6SJEeyGX96ZKBbKnA"/>
+>>>>>>> master
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5NRdGaSJEeyGX96ZKBbKnA" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -710,7 +752,11 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5NRdX6SJEeyGX96ZKBbKnA" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
+<<<<<<< HEAD
+        <children xsi:type="menu:HandledToolItem" xmi:id="_J0rkwKXrEeynVJcCUTx2Zg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_5NT6N6SJEeyGX96ZKBbKnA"/>
+=======
         <children xsi:type="menu:HandledToolItem" xmi:id="_Rhsn8aU0EeyyG-LFYAy6wQ" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" enabled="false" type="Check" command="_5NT6N6SJEeyGX96ZKBbKnA"/>
+>>>>>>> master
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_5NRda6SJEeyGX96ZKBbKnA" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
