@@ -1,11 +1,11 @@
 package com.paco.view;
 
-import com.paco.controller.EventListener;
+import com.paco.controller.Behavior;
 
 /**
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */
-public class Screen extends EventListener {
+public class Screen extends Behavior {
 	/**
 	 * Constructor del Screen
 	 */
@@ -27,6 +27,9 @@ public class Screen extends EventListener {
 		
 		// Dibujamos la escena
 		stage.draw();
+		
+		//Ralizamos las llamadas al controlador
+		addListeners();
 	}
 	
 	/**
