@@ -21,13 +21,7 @@ INDEX VERSION 1.131+C:\Users\mario\Documents\GitHub\MarioGabIFP\Super_Paco_Bros\
 3552531414.index
 240943240.index
 2251499996.index
-<<<<<<< HEAD
-1642175237.index
 2574099473.index
-4153573058.index
-=======
-2574099473.index
->>>>>>> aefdc99b447f4c2e53fc68e4066d71ca85feec2e
 3103961500.index
 3625172027.index
 4153573058.index
