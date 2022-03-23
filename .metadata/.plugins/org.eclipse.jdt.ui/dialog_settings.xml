@@ -14,8 +14,13 @@
 	<section name="JavaElementSearchActions">
 	</section>
 	<section name="RefactoringWizard.preview">
+<<<<<<< HEAD
 		<item key="width" value="720"/>
 		<item key="height" value="500"/>
+=======
+		<item key="width" value="630"/>
+		<item key="height" value="400"/>
+>>>>>>> aefdc99b447f4c2e53fc68e4066d71ca85feec2e
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item key="updateSimilarElements" value="false"/>
@@ -23,6 +28,7 @@
 		<item key="updateTextualMatches" value="true"/>
 		<item key="updateQualifiedNames" value="true"/>
 		<item key="patterns" value="*"/>
+<<<<<<< HEAD
 		<item key="renameSubpackages" value="false"/>
 	</section>
 	<section name="NewPackageWizardPage">
@@ -47,5 +53,7 @@
 		<item key="create_unimplemented" value="true"/>
 	</section>
 	<section name="RenameInformationPopup">
+=======
+>>>>>>> aefdc99b447f4c2e53fc68e4066d71ca85feec2e
 	</section>
 </section>

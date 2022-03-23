@@ -3,12 +3,12 @@ INDEX VERSION 1.131+C:\Users\mario\Documents\GitHub\MarioGabIFP\Super_Paco_Bros\
 3995027108.index
 1973561317.index
 3885786831.index
-3446081204.index
 193490017.index
-1865797976.index
+3990670468.index
+3446081204.index
 3307210469.index
 2584870405.index
-3990670468.index
+1865797976.index
 2071674118.index
 2881960682.index
 1265598562.index
@@ -21,11 +21,16 @@ INDEX VERSION 1.131+C:\Users\mario\Documents\GitHub\MarioGabIFP\Super_Paco_Bros\
 3552531414.index
 240943240.index
 2251499996.index
+<<<<<<< HEAD
 1642175237.index
 2574099473.index
 4153573058.index
+=======
+2574099473.index
+>>>>>>> aefdc99b447f4c2e53fc68e4066d71ca85feec2e
 3103961500.index
 3625172027.index
+4153573058.index
 2216734264.index
 2048703835.index
 3273598559.index
