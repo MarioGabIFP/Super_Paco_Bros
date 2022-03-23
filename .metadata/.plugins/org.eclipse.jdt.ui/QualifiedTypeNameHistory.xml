@@ -1,2 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.paco.view.screen.Menu"/>
+    <fullyQualifiedTypeName name="com.paco.motor.Event"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.SpriteBatch"/>
+    <fullyQualifiedTypeName name="com.paco.view.Graphics"/>
+    <fullyQualifiedTypeName name="com.paco.motor.MenuEventListener"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.Stage"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.Table"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.glutils.ShapeRenderer"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.math.Rectangle"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.g2d.TextureRegion"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.Pixmap"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.Pixmap.Format"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.Color"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.graphics.Texture"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.Button.ButtonStyle"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.scenes.scene2d.ui.Button"/>
+    <fullyQualifiedTypeName name="com.badlogic.gdx.Gdx"/>
+</qualifiedTypeNameHistroy>
