@@ -28,6 +28,7 @@ public class Screen extends Behavior {
 		// Dibujamos la escena
 		stage.draw();
 		
+		
 		//Ralizamos las llamadas al controlador
 		addListeners();
 	}
