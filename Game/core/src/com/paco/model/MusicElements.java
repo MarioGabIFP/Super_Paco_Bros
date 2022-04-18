@@ -12,6 +12,8 @@ import com.badlogic.gdx.audio.Music;
  *
  */
 public interface MusicElements {
-	Music music = Gdx.audio.newMusic(Gdx.files.getFileHandle("Sound/MusicBackground.mp3", FileType.Internal));
+	
+	public Music music = Gdx.audio.newMusic(Gdx.files.getFileHandle("Sound/MusicBackground.mp3", FileType.Internal));
 
+	
 }
