@@ -8,34 +8,47 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.BodyDef.BodyType;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
+import com.badlogic.gdx.physics.box2d.CircleShape;
+import com.badlogic.gdx.physics.box2d.FixtureDef;
+import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 import com.paco.core.gui.elements.Form;
-import com.paco.core.gui.elements.Models;
 import java.util.ArrayList;
 
 /**
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */
-public abstract class Graphics extends Stage implements Screen, Models, Form {
-    ArrayList<Sprite> sp = new ArrayList<>();
+public abstract class Graphics extends Stage implements Screen, Form {
+    ArrayList<Sprite> sp;
     
-    protected Graphics() {super(new StretchViewport(windowW, windowH, cam));}
+    protected Graphics() {
+        super(new StretchViewport(windowW, windowH, cam));
+        
+        this.sp = new ArrayList<>();
+    }
     
     public abstract void buildStage();
     public abstract void listen();
     public abstract void initControl(Graphics screen);
+    public abstract void update(float delta);
     
     @Override
     public void render(float delta) {
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         super.act(delta);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        update(delta);
         super.draw();
-        drawBatch();
+        drawBatch(delta);
         listen();
     }
 
-    public void drawBatch() {
+    public void drawBatch(float delta) {
         Batch batch = this.getBatch();
         batch.setProjectionMatrix(cam.combined);
         batch.begin();
@@ -43,6 +56,8 @@ public abstract class Graphics extends Stage implements Screen, Models, Form {
         for (Sprite sprite : sp) {
             sprite.draw(this.getBatch(), 1);
         }
+        
+        update(delta);
         
         batch.end();
     }
