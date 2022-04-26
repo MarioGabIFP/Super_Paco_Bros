@@ -37,7 +37,7 @@ public class Action extends Orchestrator {
             case level: {
                 if (i.isKeyPressed(Input.Keys.RIGHT)) player.setAction(Player.Action.run, false);
                 if (i.isKeyPressed(Input.Keys.LEFT)) player.setAction(Player.Action.run, true);
-                if (i.isKeyPressed(Input.Keys.SPACE)) player.setAction(Player.Action.jump, player.isFlipX());
+                if (i.isKeyJustPressed(Input.Keys.CONTROL_LEFT)) player.setAction(Player.Action.jump, player.isFlipX());
             }
         }
     }

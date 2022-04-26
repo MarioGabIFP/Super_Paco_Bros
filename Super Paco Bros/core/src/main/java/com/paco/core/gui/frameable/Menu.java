@@ -13,14 +13,14 @@ import java.util.ArrayList;
 /**
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */
-public class MenuPrincipal extends Background implements MenuModel{
+public class Menu extends Map implements MenuModel{
     ArrayList<Image> opts;
     Image title;
     
     Action a = new Action();
     Charge c = new Charge();
 
-    public MenuPrincipal() {
+    public Menu() {
         super();
         opts = new ArrayList<>();
         
@@ -29,23 +29,20 @@ public class MenuPrincipal extends Background implements MenuModel{
         opts.add(loadImage(new Texture(titles + "3.png"), windowW - 370, windowH - 300, 236, 14));
         
         pointer.setBounds(windowW - 410, windowH - 250, 14, 14);
-        pointer.initialize();
+        pointer.initialize(world);
     }
 
     @Override
     public void buildStage() {
-        Gdx.gl.glClearColor(0.435f, 0.518f, 1f, 0);
-        
         for (Image sOpt : opts) addActor(sOpt);
-        for (Image image : mapArr) addActor(image);
         
         addActor(title);
         addSp(pointer);
+        renderer.setView(cam);
     }
 
     @Override
     public void dispose() {
-        atlas.dispose();
         pointer.dispose();
         super.dispose();
     }

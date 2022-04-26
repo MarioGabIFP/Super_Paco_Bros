@@ -1,6 +1,7 @@
 package com.paco.core.models;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.physics.box2d.World;
 import static com.paco.core.gui.elements.Assets.pointers;
 import com.paco.core.models.Pointer.Action;
 
@@ -14,7 +15,7 @@ public class Pointer extends ModelBase {
     private static boolean y;
     
     @Override
-    public void initialize() {
+    public void initialize(World w) {
         setRegion(new Texture(pointers + "1.png"));
     }
     
