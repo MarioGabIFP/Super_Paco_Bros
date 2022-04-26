@@ -2,15 +2,23 @@ package com.paco.core.controller;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.physics.box2d.Body;
+import com.badlogic.gdx.physics.box2d.BodyDef;
+import com.badlogic.gdx.physics.box2d.Box2DDebugRenderer;
+import com.badlogic.gdx.physics.box2d.CircleShape;
+import com.badlogic.gdx.physics.box2d.FixtureDef;
+import com.badlogic.gdx.physics.box2d.World;
 import com.paco.core.gui.Graphics;
+import com.paco.core.gui.elements.Base;
+import java.util.ArrayList;
 
 /**
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */
-public class ScreenController {
-
+public class ScreenController implements Base {
     private static ScreenController inst;
-    private Game game;
+    private static Game game;
 
     private ScreenController() {super();}
 
@@ -19,14 +27,14 @@ public class ScreenController {
         return inst;
     }
 
-    public void initialize(Game game) {this.game = game;}
+    public void initialize(Game currentGame) {game = currentGame;}
 
-    public void showScreen(Graphics screen) {
+    public void showScreen(Graphics graphics) {
         Screen currentScreen = game.getScreen();
 
-        screen.buildStage();
-        screen.initControl(screen);
-        game.setScreen(screen);
+        graphics.buildStage();
+        graphics.initControl(graphics);
+        game.setScreen(graphics);
 
         if (currentScreen != null) currentScreen.dispose();
     }
