@@ -16,21 +16,18 @@ import static com.paco.core.gui.elements.Assets.playerDir;
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */
 public class Player extends ModelBase {
-    public enum Action {run, jump, stand, bend, grow;}
-    public enum State {big, small, dead, alive;}
+    public enum Action {run, jump, stand;}
+    public enum State {dead, alive;}
     
     private static Action action;
-    private static Action previus;
     private static State state;
-    private static boolean x, jumping, running;
+    private static boolean x, jumping, running, flying;
     
     TextureAtlas playerAtlas;
-    Animation run;
     float impulseForce;
     
     public Player() {
         this.playerAtlas = new TextureAtlas(Gdx.files.internal(playerDir + "PlayerAsset.atlas"));
-        this.run = new Animation(0.4f, getFrames(new String[]{"5","4","3"}, playerAtlas));
     }
     
     @Override
@@ -41,7 +38,6 @@ public class Player extends ModelBase {
         massData = new MassData();
         impulseForce = 220f;
         action = Action.stand;
-        previus = action;
         state = State.alive;
         jumping = false;
         running = false;
@@ -63,9 +59,8 @@ public class Player extends ModelBase {
         switch (action) {
             case run: {
                 if (collider.getLinearVelocity().x != 0) collider.setLinearVelocity(new Vector2(0, 0));
-                collider.applyLinearImpulse(new Vector2(x ? (getX() > 0 ? -impulseForce : 0) : impulseForce, collider.getLinearVelocity().y), collider.getWorldCenter(), true);
+                collider.applyLinearImpulse(new Vector2(x ? -impulseForce : impulseForce, -50), collider.getWorldCenter(), true);
                 running = true;
-                previus = action;
                 break;
             }
             case jump: {
@@ -73,27 +68,14 @@ public class Player extends ModelBase {
                 jumping = true;
                 break;
             }
-            case bend: {
-                System.out.println("agacha");
-                break;
-            }
             case stand: {
-                setRegion(new TextureRegion(playerAtlas.findRegion(collider.getLinearVelocity().y != 0 ? "3" : "1")));
-                break;
-            }
-            case grow: {
-                System.out.println("creciendo");
+                setRegion(new TextureRegion(playerAtlas.findRegion(collider.getLinearVelocity().y != 0 ? "4" : "1")));
+                running = false;
                 break;
             }
         }
         
         switch (state) {
-            case big:
-                System.out.println("grande");
-                break;
-            case small:
-                System.out.println("pequeño");
-                break;
             case dead:
                 setRegion(new TextureRegion(playerAtlas.findRegion("0")));
                 break;
@@ -101,20 +83,17 @@ public class Player extends ModelBase {
                 Vector2 late = new Vector2(0, 0);
                 Vector2 prev = new Vector2(0, 0);
                 
-                if (jumping) {
+                if (jumping || running) {
                     prev = collider.getLinearVelocity();
                     
-                    setRegion(new TextureRegion(playerAtlas.findRegion(prev.y > late.y ? "2" : "3")));
+                    if (flying) {setRegion(new TextureRegion(playerAtlas.findRegion(prev.y > late.y ? "2" : "4")));} else 
+                    if (running) {setRegion(new TextureRegion(playerAtlas.findRegion("3")));} else 
+                    if (jumping) {setRegion(new TextureRegion(playerAtlas.findRegion(prev.y > late.y ? "2" : "4")));}
                     
                     late = collider.getLinearVelocity();
                     
                     jumping = !(collider.getLinearVelocity().y == 0);
-                }
-                
-                if (running) {
-                    if (collider.getLinearVelocity().x != 0) {
-                        setRegion((TextureRegion) run.getKeyFrame(delta, true));
-                    }
+                    flying = (jumping && running);
                 }
                 
                 break;
