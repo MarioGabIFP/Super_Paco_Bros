@@ -7,9 +7,15 @@ import com.paco.core.gui.frameable.Menu;
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */
 public class Initializer extends Game {
+    ScreenController sc;
+    
     @Override
     public void create() {
-        ScreenController.getInst().initialize(this);
-        ScreenController.getInst().showScreen(new Menu());
+        sc = ScreenController.getInst();
+        
+        if (sc != null) {
+            sc.initialize(this);
+            sc.showScreen(new Menu());
+        }
     }
 }

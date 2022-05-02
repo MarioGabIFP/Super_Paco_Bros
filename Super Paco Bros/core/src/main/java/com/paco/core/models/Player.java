@@ -1,57 +1,41 @@
 package com.paco.core.models;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.badlogic.gdx.physics.box2d.CircleShape;
-import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.badlogic.gdx.physics.box2d.MassData;
-import com.badlogic.gdx.physics.box2d.World;
+import com.paco.core.controller.controls.types.ModelActions;
+import com.paco.core.gui.Graphics;
 import static com.paco.core.gui.elements.Assets.playerDir;
 
 /**
  * @author Mario Gabriel Núñez Alcázar de Velasco
+ * @author Brad Lopez
  */
 public class Player extends ModelBase {
-    public enum Action {run, jump, stand;}
     public enum State {dead, alive;}
     
-    private static Action action;
-    private static State state;
-    private static boolean x, jumping, running, flying;
+    private ModelActions.PlayerAction action;
+    private State state;
+    private boolean x, jumping, running, flying;
+    private float impulseForce;
     
-    TextureAtlas playerAtlas;
-    float impulseForce;
+    private final TextureAtlas playerAtlas = new TextureAtlas(Gdx.files.internal(playerDir + "PlayerAsset.atlas"));
+
+    public Player(Graphics screen) {super(screen);}
     
-    public Player() {
-        this.playerAtlas = new TextureAtlas(Gdx.files.internal(playerDir + "PlayerAsset.atlas"));
-    }
+    public float getNewPos() {return collider.getPosition().x <= (windowW / 2) ? (windowW / 2) : collider.getPosition().x;}
     
     @Override
-    public void initialize(World w) {
-        bodyDef = new BodyDef();
-        fixtureDef = new FixtureDef();
-        shape = new CircleShape();
-        massData = new MassData();
+    public void initialize() {
         impulseForce = 220f;
-        action = Action.stand;
+        action = ModelActions.PlayerAction.stand;
         state = State.alive;
         jumping = false;
         running = false;
         
-        bodyDef.position.set(getX() + getWidth() / 2, getY() + getHeight() / 2);
-        bodyDef.type = BodyDef.BodyType.DynamicBody;
-        collider = w.createBody(bodyDef);
-        shape.setRadius((getWidth()) / 4);
-        fixtureDef.shape = shape;
-        collider.createFixture(fixtureDef);
-        massData.mass = 1;
-        collider.setMassData(massData);
-        
-        setRegion(new TextureRegion(playerAtlas.findRegion("1")));
+        setCharacter(true);
+        initModel();
     }
     
     @Override
@@ -99,9 +83,8 @@ public class Player extends ModelBase {
                 break;
         }
         
-        
         setFlip(x, false);
-        action = Action.stand;
+        action = ModelActions.PlayerAction.stand;
         setPosition(collider.getPosition().x - (getWidth() / 2), collider.getPosition().y - (getHeight()/ 2));
     }
     
@@ -111,17 +94,14 @@ public class Player extends ModelBase {
         playerAtlas.dispose();
     }
     
-    public void setAction(Action a, boolean ggLeft) {
+    @Override
+    public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {
         action = a;
         x = ggLeft;
     }
     
-    public void setState(State s, boolean ggLeft) {
-        state = s;
-        x = ggLeft;
-    }
-
-    public float getNewPos() {
-        return collider.getPosition().x <= (windowW / 2) ? (windowW / 2) : collider.getPosition().x;
+    @Override
+    public void setAction(ModelActions.PointerAction a, boolean ggLeft) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
