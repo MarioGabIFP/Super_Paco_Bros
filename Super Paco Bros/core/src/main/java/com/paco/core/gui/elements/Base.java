@@ -15,7 +15,6 @@ import java.awt.Toolkit;
 public interface Base {
     final int windowW = 512;
     final int windowH = 416;
-    public final int pixelsPerMeter = 100;
     
     OrthographicCamera cam = new OrthographicCamera();
     Viewport viewPort = new ScalingViewport(Scaling.fit, windowW, windowH, cam);

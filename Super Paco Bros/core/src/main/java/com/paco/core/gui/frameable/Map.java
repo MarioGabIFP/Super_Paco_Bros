@@ -3,21 +3,22 @@ package com.paco.core.gui.frameable;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.renderers.OrthogonalTiledMapRenderer;
-import com.badlogic.gdx.math.Rectangle;
-import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.paco.core.gui.Graphics;
+import com.paco.core.models.Brick;
+import com.paco.core.models.Ground;
+import com.paco.core.models.ModelBase;
+import com.paco.core.models.Pipe;
 
 /**
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */
-public abstract class Map extends Graphics {
-    BodyDef bdf;
-    PolygonShape shape;
-    FixtureDef fixDef;
-    Body collider;
+public abstract class Map extends Graphics{
+    ModelBase pipe;
+    ModelBase brick;
+    ModelBase ground;
     
     public Map() {
         map = mapLoader.load(mapDir + "1.tmx");
@@ -25,46 +26,20 @@ public abstract class Map extends Graphics {
         fixDef = new FixtureDef();
         shape = new PolygonShape();
         bdf = new BodyDef();
-    }
-    
-    public void createWorldCollaiders() {
-        for (MapObject groundBrick : map.getLayers().get(3).getObjects().getByType(RectangleMapObject.class)) {
-            Rectangle r = ((RectangleMapObject) groundBrick).getRectangle();
-            
-            bdf.type = BodyDef.BodyType.StaticBody;
-            bdf.position.set((r.getX() + r.getWidth() / 2) * 2, (r.getY() + (r.getHeight() / 2)) * 2);
-            
-            collider = world.createBody(bdf);
-            
-            shape.setAsBox((r.getWidth() / 2) * 2, (r.getHeight() / 2) * 2);
-            fixDef.shape = shape;
-            collider.createFixture(fixDef);
+        
+        for (MapObject obj : map.getLayers().get(3).getObjects().getByType(RectangleMapObject.class)) {
+            ground = new Ground(super.getMe(), obj);
+            ground.initModel();
         }
         
-        for (MapObject pipe : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)) {
-            Rectangle r = ((RectangleMapObject) pipe).getRectangle();
-            
-            bdf.type = BodyDef.BodyType.StaticBody;
-            bdf.position.set((r.getX() + r.getWidth() / 2) * 2, (r.getY() + (r.getHeight() / 2)) * 2);
-            
-            collider = world.createBody(bdf);
-            
-            shape.setAsBox((r.getWidth() / 2) * 2, (r.getHeight() / 2) * 2);
-            fixDef.shape = shape;
-            collider.createFixture(fixDef);
+        for (MapObject obj : map.getLayers().get(4).getObjects().getByType(RectangleMapObject.class)) {
+            pipe = new Pipe(super.getMe(), obj);
+            pipe.initModel();
         }
         
-        for (MapObject brick : map.getLayers().get(5).getObjects().getByType(RectangleMapObject.class)) {
-            Rectangle r = ((RectangleMapObject) brick).getRectangle();
-            
-            bdf.type = BodyDef.BodyType.StaticBody;
-            bdf.position.set((r.getX() + r.getWidth() / 2) * 2, (r.getY() + (r.getHeight() / 2)) * 2);
-            
-            collider = world.createBody(bdf);
-            
-            shape.setAsBox((r.getWidth() / 2) * 2, (r.getHeight() / 2) * 2);
-            fixDef.shape = shape;
-            collider.createFixture(fixDef);
+        for (MapObject obj : map.getLayers().get(5).getObjects().getByType(RectangleMapObject.class)) {
+            brick = new Brick(super.getMe(), obj);
+            brick.initModel();
         }
     }
 }

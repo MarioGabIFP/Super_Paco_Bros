@@ -1,61 +1,41 @@
 package com.paco.core.models;
 
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.Vector2;
-import com.badlogic.gdx.physics.box2d.BodyDef;
-import com.badlogic.gdx.physics.box2d.CircleShape;
-import com.badlogic.gdx.physics.box2d.FixtureDef;
-import com.badlogic.gdx.physics.box2d.MassData;
-import com.badlogic.gdx.physics.box2d.World;
+import com.paco.core.controller.controls.types.ModelActions;
+import com.paco.core.gui.Graphics;
 import static com.paco.core.gui.elements.Assets.playerDir;
 
 /**
  * @author Mario Gabriel Núñez Alcázar de Velasco
+ * @author Brad Lopez
  */
 public class Player extends ModelBase {
-    public enum Action {run, jump, stand, bend, grow;}
-    public enum State {big, small, dead, alive;}
+    public enum State {dead, alive;}
     
-    private static Action action;
-    private static Action previus;
-    private static State state;
-    private static boolean x, jumping, running;
+    private ModelActions.PlayerAction action;
+    private State state;
+    private boolean x, jumping, running, flying;
+    private float impulseForce;
     
-    TextureAtlas playerAtlas;
-    Animation run;
-    float impulseForce;
+    private final TextureAtlas playerAtlas = new TextureAtlas(Gdx.files.internal(playerDir + "PlayerAsset.atlas"));
+
+    public Player(Graphics screen) {super(screen);}
     
-    public Player() {
-        this.playerAtlas = new TextureAtlas(Gdx.files.internal(playerDir + "PlayerAsset.atlas"));
-        this.run = new Animation(0.4f, getFrames(new String[]{"5","4","3"}, playerAtlas));
-    }
+    public float getNewPos() {return collider.getPosition().x <= (windowW / 2) ? (windowW / 2) : collider.getPosition().x;}
     
     @Override
-    public void initialize(World w) {
-        bodyDef = new BodyDef();
-        fixtureDef = new FixtureDef();
-        shape = new CircleShape();
-        massData = new MassData();
+    public void initialize() {
         impulseForce = 220f;
-        action = Action.stand;
-        previus = action;
+        action = ModelActions.PlayerAction.stand;
         state = State.alive;
         jumping = false;
         running = false;
         
-        bodyDef.position.set(getX() + getWidth() / 2, getY() + getHeight() / 2);
-        bodyDef.type = BodyDef.BodyType.DynamicBody;
-        collider = w.createBody(bodyDef);
-        shape.setRadius((getWidth()) / 4);
-        fixtureDef.shape = shape;
-        collider.createFixture(fixtureDef);
-        massData.mass = 1;
-        collider.setMassData(massData);
-        
-        setRegion(new TextureRegion(playerAtlas.findRegion("1")));
+        setCharacter(true);
+        initModel();
     }
     
     @Override
@@ -63,9 +43,8 @@ public class Player extends ModelBase {
         switch (action) {
             case run: {
                 if (collider.getLinearVelocity().x != 0) collider.setLinearVelocity(new Vector2(0, 0));
-                collider.applyLinearImpulse(new Vector2(x ? (getX() > 0 ? -impulseForce : 0) : impulseForce, collider.getLinearVelocity().y), collider.getWorldCenter(), true);
+                collider.applyLinearImpulse(new Vector2(x ? -impulseForce : impulseForce, -50), collider.getWorldCenter(), true);
                 running = true;
-                previus = action;
                 break;
             }
             case jump: {
@@ -73,27 +52,14 @@ public class Player extends ModelBase {
                 jumping = true;
                 break;
             }
-            case bend: {
-                System.out.println("agacha");
-                break;
-            }
             case stand: {
-                setRegion(new TextureRegion(playerAtlas.findRegion(collider.getLinearVelocity().y != 0 ? "3" : "1")));
-                break;
-            }
-            case grow: {
-                System.out.println("creciendo");
+                setRegion(new TextureRegion(playerAtlas.findRegion(collider.getLinearVelocity().y != 0 ? "4" : "1")));
+                running = false;
                 break;
             }
         }
         
         switch (state) {
-            case big:
-                System.out.println("grande");
-                break;
-            case small:
-                System.out.println("pequeño");
-                break;
             case dead:
                 setRegion(new TextureRegion(playerAtlas.findRegion("0")));
                 break;
@@ -101,28 +67,24 @@ public class Player extends ModelBase {
                 Vector2 late = new Vector2(0, 0);
                 Vector2 prev = new Vector2(0, 0);
                 
-                if (jumping) {
+                if (jumping || running) {
                     prev = collider.getLinearVelocity();
                     
-                    setRegion(new TextureRegion(playerAtlas.findRegion(prev.y > late.y ? "2" : "3")));
+                    if (flying) {setRegion(new TextureRegion(playerAtlas.findRegion(prev.y > late.y ? "2" : "4")));} else 
+                    if (running) {setRegion(new TextureRegion(playerAtlas.findRegion("3")));} else 
+                    if (jumping) {setRegion(new TextureRegion(playerAtlas.findRegion(prev.y > late.y ? "2" : "4")));}
                     
                     late = collider.getLinearVelocity();
                     
                     jumping = !(collider.getLinearVelocity().y == 0);
-                }
-                
-                if (running) {
-                    if (collider.getLinearVelocity().x != 0) {
-                        setRegion((TextureRegion) run.getKeyFrame(delta, true));
-                    }
+                    flying = (jumping && running);
                 }
                 
                 break;
         }
         
-        
         setFlip(x, false);
-        action = Action.stand;
+        action = ModelActions.PlayerAction.stand;
         setPosition(collider.getPosition().x - (getWidth() / 2), collider.getPosition().y - (getHeight()/ 2));
     }
     
@@ -132,17 +94,14 @@ public class Player extends ModelBase {
         playerAtlas.dispose();
     }
     
-    public void setAction(Action a, boolean ggLeft) {
+    @Override
+    public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {
         action = a;
         x = ggLeft;
     }
     
-    public void setState(State s, boolean ggLeft) {
-        state = s;
-        x = ggLeft;
-    }
-
-    public float getNewPos() {
-        return collider.getPosition().x <= (windowW / 2) ? (windowW / 2) : collider.getPosition().x;
+    @Override
+    public void setAction(ModelActions.PointerAction a, boolean ggLeft) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
