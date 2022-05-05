@@ -6,7 +6,6 @@ import com.paco.core.controller.ScreenController;
 import com.paco.core.controller.controls.types.ModelActions;
 import com.paco.core.gui.frameable.Level;
 import com.paco.core.models.ModelBase;
-import com.paco.core.models.Pointer;
 
 /**
  * @author Mario Gabriel Núñez Alcázar de Velasco

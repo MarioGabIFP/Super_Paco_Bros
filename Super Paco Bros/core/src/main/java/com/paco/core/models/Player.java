@@ -26,6 +26,14 @@ public class Player extends ModelBase {
     
     public float getNewPos() {return collider.getPosition().x <= (windowW / 2) ? (windowW / 2) : collider.getPosition().x;}
     
+    @Override public void onCollision() {}
+    
+    @Override
+    public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {
+        action = a;
+        x = ggLeft;
+    }
+    
     @Override
     public void initialize() {
         impulseForce = 220f;
@@ -36,6 +44,8 @@ public class Player extends ModelBase {
         
         setCharacter(true);
         initModel();
+        getBaldFixture().setUserData("bald");
+        getBodyFixture().setUserData(this);
     }
     
     @Override
@@ -94,16 +104,5 @@ public class Player extends ModelBase {
     public void dispose() {
         getTexture().dispose();
         playerAtlas.dispose();
-    }
-    
-    @Override
-    public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {
-        action = a;
-        x = ggLeft;
-    }
-    
-    @Override
-    public void setAction(ModelActions.PointerAction a, boolean ggLeft) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

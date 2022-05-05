@@ -20,12 +20,5 @@ public class Beer extends ModelBase {
     public void update(float delta) {}
 
     @Override
-    public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void setAction(ModelActions.PointerAction a, boolean ggLeft) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    public void onCollision() {}
 }

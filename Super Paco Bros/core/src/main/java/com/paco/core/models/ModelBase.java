@@ -10,10 +10,12 @@ import com.badlogic.gdx.physics.box2d.Body;
 import com.badlogic.gdx.physics.box2d.BodyDef;
 import com.badlogic.gdx.physics.box2d.CircleShape;
 import com.badlogic.gdx.physics.box2d.EdgeShape;
+import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.MassData;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
+import com.paco.core.controller.controls.types.ModelActions;
 import com.paco.core.gui.Graphics;
 import com.paco.core.models.elements.ModelFunctions;
 
@@ -21,17 +23,19 @@ import com.paco.core.models.elements.ModelFunctions;
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */
 public abstract class ModelBase extends Sprite implements ModelFunctions{
-    BodyDef bodyDef;
-    Body collider;
-    FixtureDef fixtureDef;
-    CircleShape circleShape;
-    PolygonShape polygonShape;
-    MassData massData;
-    EdgeShape baldSpot;
-    MapObject obj;
-    World world;
-    TiledMap map;
-    Rectangle bnds;
+    private BodyDef bodyDef;
+    private FixtureDef fixtureDef;
+    private CircleShape circleShape;
+    private PolygonShape polygonShape;
+    private MassData massData;
+    private EdgeShape baldSpot;
+    private World world;
+    private Rectangle bnds;
+    
+    public Body collider;
+    public MapObject obj;
+    public TiledMap map;
+    public Fixture objFixture, baldFixture, bodyFixture;
     
     boolean character;
 
@@ -49,10 +53,16 @@ public abstract class ModelBase extends Sprite implements ModelFunctions{
         this.map = screen.map;
     }
     
-    public boolean isCharacter() {return character;}
-    public void setCharacter(boolean character) {this.character = character;}
+    public final void setCharacter(boolean character) {this.character = character;}
+    public final Fixture getObjFixture() {return objFixture;}
+    public final Fixture getBaldFixture() {return baldFixture;}
+    public final Fixture getBodyFixture() {return bodyFixture;}
+    public final boolean isCharacter() {return character;}
     
-    public void initModel() {   
+    public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {}
+    public void setAction(ModelActions.PointerAction a, boolean ggLeft) {}
+    
+    public void initModel() {
         bodyDef = new BodyDef();
         fixtureDef = new FixtureDef();
         
@@ -66,7 +76,7 @@ public abstract class ModelBase extends Sprite implements ModelFunctions{
 
             polygonShape.setAsBox((bnds.getWidth() / 2) * 2, (bnds.getHeight() / 2) * 2);
             fixtureDef.shape = polygonShape;
-            collider.createFixture(fixtureDef);
+            objFixture = collider.createFixture(fixtureDef);
         } else {
             circleShape = new CircleShape();
             massData = new MassData();
@@ -81,14 +91,14 @@ public abstract class ModelBase extends Sprite implements ModelFunctions{
 
             fixtureDef.shape = circleShape;
 
-            collider.createFixture(fixtureDef);
+            bodyFixture = collider.createFixture(fixtureDef);
 
             baldSpot.set(new Vector2(-4, getHeight() / 4), new Vector2(4, getHeight() / 4));
 
             fixtureDef.shape = baldSpot;
             fixtureDef.isSensor = true;
 
-            collider.createFixture(fixtureDef).setUserData("baldSpot");
+            baldFixture = collider.createFixture(fixtureDef);
 
             massData.mass = 1;
 
