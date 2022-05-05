@@ -4,15 +4,15 @@
     ],
     "fileStates": {
         "C:/Users/mario/Documents/GitHub/MarioGabIFP/Super_Paco_Bros/Super Paco Bros/assets/level/Tiled/1.tmx": {
-            "scale": 1.5,
-            "selectedLayer": 5,
+            "scale": 3,
+            "selectedLayer": 0,
             "viewCenter": {
-                "x": 170.66666666666663,
-                "y": 162.33333333333334
+                "x": 192.33333333333331,
+                "y": 103.16666666666667
             }
         },
         "C:/Users/mario/Documents/GitHub/MarioGabIFP/Super_Paco_Bros/Super Paco Bros/assets/level/Tiled/1.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 5.5
         }
     },
     "openFiles": [

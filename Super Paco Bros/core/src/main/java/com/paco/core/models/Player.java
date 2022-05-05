@@ -50,6 +50,7 @@ public class Player extends ModelBase {
             case jump: {
                 collider.applyLinearImpulse(new Vector2(collider.getLinearVelocity().x, impulseForce), collider.getWorldCenter(), true);
                 jumping = true;
+                jump.play();
                 break;
             }
             case stand: {
@@ -61,6 +62,7 @@ public class Player extends ModelBase {
         
         switch (state) {
             case dead:
+                lose.play();
                 setRegion(new TextureRegion(playerAtlas.findRegion("0")));
                 break;
             case alive:

@@ -8,7 +8,7 @@ import com.paco.core.gui.Graphics;
  * @author Brad Lopez
  */
 public class Beer extends ModelBase {
-    public Ground(Graphics screen, MapObject obj) {super(screen, obj);}
+    public Beer(Graphics screen, MapObject obj) {super(screen, obj);}
     
     @Override
     public void initialize() {}
