@@ -15,10 +15,17 @@ public class Pointer extends ModelBase {
     public Pointer() {}
     
     @Override public void onCollision() {}
+    @Override public void onCollision(Player pl) {}
+    @Override public void onCollision(String val) {}
     
-    @Override public void initialize() {setRegion(new Texture(pointers + "1.png"));}
     @Override public void dispose() {getTexture().dispose();}
-
+    
+    @Override 
+    public void initialize() {
+        actor = Actors.pointer;
+        setRegion(new Texture(pointers + "1.png"));
+    }
+    
     @Override
     public void setAction(ModelActions.PointerAction a, boolean ggUp) {
         actualAction = a;

@@ -23,7 +23,7 @@ public class ScreenController implements Base {
 
     public void showScreen(Graphics graphics) {
         Screen currentScreen = game.getScreen();
-
+        
         graphics.buildStage();
         graphics.initControl(graphics);
         game.setScreen(graphics);

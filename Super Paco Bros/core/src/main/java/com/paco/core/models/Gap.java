@@ -1,14 +1,13 @@
 package com.paco.core.models;
 
 import com.badlogic.gdx.maps.MapObject;
-import com.paco.core.controller.controls.types.ModelActions;
 import com.paco.core.gui.Graphics;
 
 /**
  * @author Mario Gabriel Núñez Alcázar de Velasco
  */
-public class Brick extends ModelBase {
-    public Brick(Graphics screen, MapObject obj) {super(screen, obj);}
+public class Gap extends ModelBase {
+    public Gap(Graphics screen, MapObject obj) {super(screen, obj);}
     
     @Override
     public void initialize() {}
@@ -18,10 +17,10 @@ public class Brick extends ModelBase {
 
     @Override
     public void update(float delta) {}
-    
+
     @Override
-    public void onCollision() {}    
+    public void onCollision() {}
     
-    @Override public void onCollision(Player pl) {}
+    @Override public void onCollision(Player pl) {pl.kill();}
     @Override public void onCollision(String val) {}
 }

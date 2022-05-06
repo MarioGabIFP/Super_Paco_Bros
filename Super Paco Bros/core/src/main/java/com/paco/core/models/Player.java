@@ -17,34 +17,39 @@ public class Player extends ModelBase {
     
     private ModelActions.PlayerAction action;
     private State state;
-    private boolean x, jumping, running, flying;
-    private float impulseForce;
+    private boolean x, jumping, running, flying, dead;
+
+    private float impulseForce, deadTime, time;
+    private int beersAmount;
     
-    private final TextureAtlas playerAtlas = new TextureAtlas(Gdx.files.internal(playerDir + "PlayerAsset.atlas"));
+    public final TextureAtlas playerAtlas = new TextureAtlas(Gdx.files.internal(playerDir + "PlayerAsset.atlas"));
 
     public Player(Graphics screen) {super(screen);}
     
-    public float getNewPos() {return collider.getPosition().x <= (windowW / 2) ? (windowW / 2) : collider.getPosition().x;}
+    public final void setDeadTime(float time) {this.time = time;}
+    public final void drinkBeer() {beersAmount++;}
+    public final float getNewPos() {return collider.getPosition().x <= (windowW / 2) ? (windowW / 2) : collider.getPosition().x;}
+    public final float getDeadTime() {return deadTime;}
+    public final boolean isDead() {return dead;}
     
     @Override public void onCollision() {}
+    @Override public void onCollision(Player pl) {}
+    @Override public void onCollision(String val) {}
     
-    @Override
-    public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {
-        action = a;
-        x = ggLeft;
-    }
+    @Override public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {if (!isDead()) action = a; x = ggLeft;}
     
     @Override
     public void initialize() {
         impulseForce = 220f;
         action = ModelActions.PlayerAction.stand;
         state = State.alive;
+        actor = Actors.player;
         jumping = false;
         running = false;
         
         setCharacter(true);
         initModel();
-        getBaldFixture().setUserData("bald");
+        getBaldFixture().setUserData("fist");
         getBodyFixture().setUserData(this);
     }
     
@@ -72,9 +77,12 @@ public class Player extends ModelBase {
         
         switch (state) {
             case dead:
+                music.stop();
                 lose.play();
                 setRegion(new TextureRegion(playerAtlas.findRegion("0")));
+                dead = true;
                 break;
+
             case alive:
                 Vector2 late = new Vector2(0, 0);
                 Vector2 prev = new Vector2(0, 0);
@@ -92,17 +100,22 @@ public class Player extends ModelBase {
                     flying = (jumping && running);
                 }
                 
+                setFlip(x, false);
+                action = ModelActions.PlayerAction.stand;
+                setPosition(collider.getPosition().x - (getWidth() / 2), collider.getPosition().y - ((getHeight()/ 2) - 2));
+                
                 break;
         }
-        
-        setFlip(x, false);
-        action = ModelActions.PlayerAction.stand;
-        setPosition(collider.getPosition().x - (getWidth() / 2), collider.getPosition().y - (getHeight()/ 2));
     }
     
     @Override
     public void dispose() {
         getTexture().dispose();
         playerAtlas.dispose();
+    }
+    
+    public final void kill() {
+        state = State.dead;
+        deadTime = time;
     }
 }

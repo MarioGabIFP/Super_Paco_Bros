@@ -18,6 +18,6 @@ public class Charge extends Orchestrator {
             ts = TypeScreen.level;
             ts.setWorld(1);
             ts.setLevelNum(1);
-        }
+        } 
     }
 }

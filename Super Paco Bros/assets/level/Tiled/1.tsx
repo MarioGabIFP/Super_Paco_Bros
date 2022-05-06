@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tileset version="1.8" tiledversion="1.8.2" name="1" tilewidth="8" tileheight="8" tilecount="81" columns="0">
+<tileset version="1.8" tiledversion="1.8.2" name="1" tilewidth="8" tileheight="8" tilecount="82" columns="0">
  <grid orientation="orthogonal" width="1" height="1"/>
  <tile id="0">
   <image width="8" height="8" source="../Textures/0.png"/>
@@ -243,5 +243,8 @@
  </tile>
  <tile id="81">
   <image width="8" height="8" source="../Textures/80.png"/>
+ </tile>
+ <tile id="83">
+  <image width="8" height="8" source="../Textures/81.png"/>
  </tile>
 </tileset>

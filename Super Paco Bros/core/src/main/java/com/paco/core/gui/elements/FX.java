@@ -8,6 +8,7 @@ import com.badlogic.gdx.audio.Sound;
 
 /**
  * @author Brad Lopez
+ * @author Paolo
  */
 public interface FX extends Base {
     Music music = Gdx.audio.newMusic(Gdx.files.getFileHandle(musicAssets + "1.mp3", FileType.Internal));

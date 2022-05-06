@@ -21,4 +21,7 @@ public class Pipe extends ModelBase {
     
     @Override
     public void onCollision() {}
+    
+    @Override public void onCollision(Player pl) {}
+    @Override public void onCollision(String val) {}
 }

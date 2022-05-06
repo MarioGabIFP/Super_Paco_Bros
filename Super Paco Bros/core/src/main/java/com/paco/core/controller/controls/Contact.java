@@ -4,6 +4,8 @@ import com.badlogic.gdx.physics.box2d.ContactImpulse;
 import com.badlogic.gdx.physics.box2d.ContactListener;
 import com.badlogic.gdx.physics.box2d.Fixture;
 import com.badlogic.gdx.physics.box2d.Manifold;
+import com.paco.core.models.ModelBase;
+import com.paco.core.models.Player;
 
 /**
  * @author Mario Gabriel Núñez Alcázar de Velasco
@@ -17,10 +19,11 @@ public class Contact implements ContactListener {
         fixtureOnContactA = contact.getFixtureA();
         fixtureOnContactB = contact.getFixtureB();
         
-        System.out.println("*******************************");
-        System.out.println(fixtureOnContactA.getUserData());
-        System.out.println(fixtureOnContactB.getUserData());
-        System.out.println("*******************************");
+        if (fixtureOnContactA.getUserData() != "fist") {
+            ((ModelBase) fixtureOnContactA.getUserData()).onCollision((Player) fixtureOnContactB.getUserData());
+        } else {
+            ((ModelBase) fixtureOnContactB.getUserData()).onCollision((String) fixtureOnContactA.getUserData());
+        }
     }
 
     @Override

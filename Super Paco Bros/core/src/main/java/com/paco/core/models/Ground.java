@@ -1,7 +1,6 @@
 package com.paco.core.models;
 
 import com.badlogic.gdx.maps.MapObject;
-import com.paco.core.controller.controls.types.ModelActions;
 import com.paco.core.gui.Graphics;
 
 /**
@@ -21,4 +20,7 @@ public class Ground extends ModelBase {
     
     @Override
     public void onCollision() {}
+    
+    @Override public void onCollision(Player pl) {}
+    @Override public void onCollision(String val) {}
 }
