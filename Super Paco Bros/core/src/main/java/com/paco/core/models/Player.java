@@ -27,7 +27,7 @@ public class Player extends ModelBase {
     public Player(Graphics screen) {super(screen);}
     
     public final void setDeadTime(float time) {this.time = time;}
-    public final void drinkBeer() {beersAmount++;}
+    public final void drinkBeer() {beersAmount++; Gdx.app.log("Paco", "Glup");}
     public final float getNewPos() {return collider.getPosition().x <= (windowW / 2) ? (windowW / 2) : collider.getPosition().x;}
     public final float getDeadTime() {return deadTime;}
     public final boolean isDead() {return dead;}

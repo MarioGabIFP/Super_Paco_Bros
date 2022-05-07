@@ -1,9 +1,12 @@
 package com.paco.core.models;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.objects.RectangleMapObject;
 import com.badlogic.gdx.maps.tiled.TiledMap;
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
+import com.badlogic.gdx.maps.tiled.TiledMapTileLayer.Cell;
 import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.physics.box2d.Body;
@@ -26,19 +29,24 @@ public abstract class ModelBase extends Sprite implements ModelFunctions{
     public enum Actors {player,pointer;}
     
     private BodyDef bodyDef;
+    private Body mybdy;
     private FixtureDef fixtureDef;
     private PolygonShape rectShape, polygonShape;
     private MassData massData;
     private EdgeShape baldSpot;
     private Rectangle bnds;
-    private World world;
+    private TiledMapTileLayer myTiles;
     private boolean character;
+    private int x, y;
+    private World world;
     
     public Body collider;
     public MapObject obj;
     public TiledMap map;
     public Fixture objFixture, fistFixture, bodyFixture;
     public Actors actor;
+    
+    private final ArrayList<TiledMapTileLayer.Cell> cells = new ArrayList<>();
     
     public final ArrayList<Fixture> fixtures = new ArrayList<>();
 
@@ -61,6 +69,7 @@ public abstract class ModelBase extends Sprite implements ModelFunctions{
     public final Fixture getBaldFixture() {return fistFixture;}
     public final Fixture getBodyFixture() {return bodyFixture;}
     public final Actors getActor() {return actor;}
+    public TiledMapTileLayer.Cell getCell(int layer, int x, int y) {return (Cell)((TiledMapTileLayer) map.getLayers().get(layer)).getCell(x, y);}
     public final boolean isCharacter() {return character;}
     
     public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {}
@@ -111,5 +120,28 @@ public abstract class ModelBase extends Sprite implements ModelFunctions{
 
             collider.setMassData(massData);
         }
+    }
+    
+    public void destroy(ModelBase mb, int layer) {
+        x = (int) mb.getObjFixture().getBody().getPosition().x / 16;
+        y = (int) mb.getObjFixture().getBody().getPosition().y / 16;
+        
+        mybdy = mb.getObjFixture().getBody();
+        myTiles = (TiledMapTileLayer) map.getLayers().get(layer);
+        
+        for (int i = 0; i < 4; i++) {
+            cells.add(myTiles.getCell(
+                (int) x - (i >= 2 ? i >= 3 ? 0 : 1 : i),
+                (int) y - (i >= 2 ? i >= 3 ? 1 : 0 : i)
+            ));
+        }
+        
+        Gdx.app.postRunnable(() -> {
+            world.destroyBody(mybdy);
+            for (TiledMapTileLayer.Cell cell : cells) {
+                cell.setTile(null);
+            }
+            cells.clear();
+        });
     }
 }

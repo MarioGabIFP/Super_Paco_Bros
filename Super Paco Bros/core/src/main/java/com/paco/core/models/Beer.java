@@ -1,6 +1,5 @@
 package com.paco.core.models;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.maps.MapObject;
 import com.paco.core.gui.Graphics;
 
@@ -19,7 +18,10 @@ public class Beer extends ModelBase {
 
     @Override 
     public void onCollision(Player pl) {
-        pl.drinkBeer();
-        Gdx.app.log("Paco", "Glup");
+        if (getCell(3, (int) getObjFixture().getBody().getPosition().x / 16, (int) getObjFixture().getBody().getPosition().y / 16) == null) {
+            destroy(this, 2);
+            drink.play();
+            pl.drinkBeer();
+        }
     }
 }

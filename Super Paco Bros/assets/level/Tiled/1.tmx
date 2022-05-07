@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="480" height="26" tilewidth="8" tileheight="8" infinite="0" nextlayerid="15" nextobjectid="61">
+<map version="1.8" tiledversion="1.8.2" orientation="orthogonal" renderorder="right-down" width="480" height="26" tilewidth="8" tileheight="8" infinite="0" nextlayerid="15" nextobjectid="62">
  <tileset firstgid="1" source="1.tsx"/>
  <layer id="1" name="backgroundColor" width="480" height="26">
   <data encoding="base64" compression="zlib">
@@ -13,7 +13,7 @@
  </layer>
  <layer id="3" name="powerUps" width="480" height="26">
   <data encoding="base64" compression="zlib">
-   eJzt2bEJAAAIA0H3c/99bFzARgjcQWb4IlUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN70DAP7oLwAAAAAAAEAmfy8A/NNfAAAAAAAAAAAg1QAnxAJZ
+   eJzt2ksNACAMRMGa5ONfCbXQCw1hJnn3FbARAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADUjm90jAOAzK9vdIwAAAAAAAAAo87cCgPv8rQAAAAAAAAAAgFcdaV8CtQ==
   </data>
  </layer>
  <layer id="4" name="graphics" width="480" height="26">
@@ -49,14 +49,34 @@
   <object id="60" x="1426.03" y="71" width="27.9992" height="137"/>
  </objectgroup>
  <objectgroup id="7" name="beer">
-  <object id="24" x="256" y="160" width="16" height="16"/>
   <object id="25" x="288" y="120" width="16" height="16"/>
+  <object id="61" x="256" y="160" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="8" name="brick">
-  <object id="20" x="288" y="120" width="16" height="16"/>
-  <object id="21" x="304" y="120" width="16" height="16"/>
-  <object id="22" x="176" y="160" width="16" height="16"/>
-  <object id="23" x="208" y="160" width="16" height="16"/>
+  <object id="20" x="288" y="120" width="16" height="16">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="21" x="304" y="120" width="16" height="16">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="22" x="176" y="160" width="16" height="16">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="23" x="208" y="160" width="16" height="16">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
  <objectgroup id="12" name="gap">
   <object id="28" x="0" y="200" width="3840" height="8"/>
