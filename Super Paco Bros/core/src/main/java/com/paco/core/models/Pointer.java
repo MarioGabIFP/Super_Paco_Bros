@@ -14,9 +14,24 @@ public class Pointer extends ModelBase {
     
     public Pointer() {}
     
-    @Override public void initialize() {setRegion(new Texture(pointers + "1.png"));}
+    @Override public void onCollision() {}
+    @Override public void onCollision(Player pl) {}
+    @Override public void onCollision(String val) {}
+    
     @Override public void dispose() {getTexture().dispose();}
-
+    
+    @Override 
+    public void initialize() {
+        actor = Actors.pointer;
+        setRegion(new Texture(pointers + "1.png"));
+    }
+    
+    @Override
+    public void setAction(ModelActions.PointerAction a, boolean ggUp) {
+        actualAction = a;
+        y = ggUp;
+    }
+    
     @Override
     public void update(float delta) {
         if (actualAction != null) {
@@ -28,16 +43,5 @@ public class Pointer extends ModelBase {
         }
         
         actualAction = null;
-    }
-    
-    @Override
-    public void setAction(ModelActions.PointerAction a, boolean ggUp) {
-        actualAction = a;
-        y = ggUp;
-    }
-
-    @Override
-    public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

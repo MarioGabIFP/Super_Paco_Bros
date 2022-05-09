@@ -1,7 +1,6 @@
 package com.paco.core.models;
 
 import com.badlogic.gdx.maps.MapObject;
-import com.paco.core.controller.controls.types.ModelActions;
 import com.paco.core.gui.Graphics;
 
 /**
@@ -18,14 +17,10 @@ public class Ground extends ModelBase {
 
     @Override
     public void update(float delta) {}
-
+    
     @Override
-    public void setAction(ModelActions.PlayerAction a, boolean ggLeft) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
-    @Override
-    public void setAction(ModelActions.PointerAction a, boolean ggLeft) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+    public void onCollision() {}
+    
+    @Override public void onCollision(Player pl) {}
+    @Override public void onCollision(String val) {}
 }

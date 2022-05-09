@@ -17,6 +17,7 @@ import com.badlogic.gdx.physics.box2d.FixtureDef;
 import com.badlogic.gdx.physics.box2d.PolygonShape;
 import com.badlogic.gdx.physics.box2d.World;
 import com.badlogic.gdx.scenes.scene2d.ui.Image;
+import com.paco.core.controller.Orchestrator;
 import com.paco.core.controller.controls.Action;
 import com.paco.core.controller.controls.Charge;
 import com.paco.core.controller.controls.Contact;
@@ -29,7 +30,7 @@ import java.util.ArrayList;
 public abstract class Graphics extends Stage implements Screen, Form {
     public TiledMap map;
     public World world;
-    public Action a = new Action();
+    public Orchestrator a = new Action(this);
     public Charge c = new Charge();
     
     protected ArrayList<Sprite> sp;
@@ -57,6 +58,7 @@ public abstract class Graphics extends Stage implements Screen, Form {
     public abstract void update(float delta);
 
     public void addSp(Sprite sp) {this.sp.add(sp);}
+    public ArrayList<Sprite> getSp() {return this.sp;}
     public Graphics getMe() {return this;}
     
     @Override public void show() {Gdx.input.setInputProcessor(this);}
@@ -87,7 +89,7 @@ public abstract class Graphics extends Stage implements Screen, Form {
         Gdx.gl.glClearColor(0, 0, 0, 0);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         super.act(delta);
-        renderer.render();
+        if (renderer != null) renderer.render();
         box2DDebugRenderer.render(world, cam.combined);
         super.draw();
         drawBatch(delta);

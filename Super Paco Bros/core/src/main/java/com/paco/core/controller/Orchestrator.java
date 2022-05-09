@@ -9,4 +9,5 @@ import com.paco.core.controller.elements.Options;
 public abstract class Orchestrator implements Options{
     public static MainMenu mainOpts;
     public static TypeScreen ts;
+    public float time = 0;
 }

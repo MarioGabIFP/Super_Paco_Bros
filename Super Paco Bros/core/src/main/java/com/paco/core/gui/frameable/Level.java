@@ -1,6 +1,7 @@
 package com.paco.core.gui.frameable;
 
 import com.badlogic.gdx.Gdx;
+import com.paco.core.controller.controls.Action;
 import com.paco.core.gui.Graphics;
 import com.paco.core.models.Player;
 
@@ -18,15 +19,17 @@ public class Level extends Map{
     }
 
     @Override public void buildStage() {addSp(paco);}
-    @Override public void listen() {a.pressKey(Gdx.input, paco);}
+    @Override public void listen() {((Action) a).pressKey(Gdx.input, paco);}
     @Override public void initControl(Graphics screen) {c.initialize(screen);}
     
     @Override
     public void update(float delta) {
-        cam.position.x = paco.getNewPos();
-        cam.update();
-        paco.update(delta);
-        renderer.setView(cam);
+        if (!paco.isDead()) {
+            cam.position.x = paco.getNewPos();
+            cam.update();
+            paco.update(delta);
+            renderer.setView(cam);
+        }
     }
 
     @Override
