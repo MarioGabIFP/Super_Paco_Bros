@@ -20,6 +20,6 @@ public class Brick extends ModelBase {
     @Override public void dispose() {}
     @Override public void update(float delta) {}
     @Override public void onCollision() {}    
-    @Override public void onCollision(Player pl) {if (destroyable) destroy(this, 3);}
-    @Override public void onCollision(String val) {}
+    @Override public void onCollision(Player pl) {}
+    @Override public void onCollision(String val) {if (destroyable && "fist".equals(val)) destroy(this, 3);}
 }
