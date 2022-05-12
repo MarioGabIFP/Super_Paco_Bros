@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="480" height="26" tilewidth="8" tileheight="8" infinite="0" nextlayerid="10" nextobjectid="252">
+<map version="1.8" tiledversion="1.8.4" orientation="orthogonal" renderorder="right-down" width="480" height="26" tilewidth="8" tileheight="8" infinite="0" nextlayerid="16" nextobjectid="289">
  <tileset firstgid="1" source="1.tsx"/>
  <layer id="1" name="backgroundColor" width="480" height="26">
   <data encoding="base64" compression="zlib">
@@ -8,258 +8,1386 @@
  </layer>
  <layer id="7" name="backgroundElements" width="480" height="26">
   <data encoding="base64" compression="zlib">
-   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
+   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
+  </data>
+ </layer>
+ <layer id="15" name="powerUps" width="480" height="26">
+  <data encoding="base64" compression="zlib">
+   eJzt2kEOhCAMBVAvOePc/yTjmiiJEdAv7yXsm0JTGlgWAAAAmMdnW9+7g+CUVnvWc++dK4C6dVu/u4PglFZ71nPvnat97iWQTQ2PJ+e04F4C2dTweHIOkMfsBEC6xF5mdgJ4hsQe8hR6GTVqC6jRQ6APtQUAAAAAzMSbJAAlvaE/b5IAlPQGAI6Y0QBgPDMaALyL2RoAxjNbAwAAAAAA8Bb+nlyTmr/UuMnhjEGdvyfXpOYvNW5yOGMAAAAAADCfP5BFGa8=
   </data>
  </layer>
  <layer id="6" name="graphics" width="480" height="26">
   <data encoding="base64" compression="zlib">
-   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
+   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
   </data>
  </layer>
  <objectgroup id="3" name="ground">
-  <object id="7" x="0" y="176" width="112.09" height="32"/>
-  <object id="15" x="112.205" y="192" width="3615.84" height="16"/>
-  <object id="17" x="3728.36" y="176.364" width="112.09" height="32"/>
-  <object id="18" x="0.288333" y="0.333333" width="15.4233" height="176"/>
-  <object id="22" x="1871.91" y="176" width="64.0445" height="32.0057"/>
+  <object id="7" x="0" y="176" width="112" height="32.0078"/>
+  <object id="17" x="3728" y="176.001" width="112" height="32.0039"/>
+  <object id="22" x="1872" y="176" width="64.0054" height="31.9979"/>
  </objectgroup>
  <objectgroup id="4" name="pipe">
-  <object id="8" x="368" y="143.938" width="32.0625" height="15.0625"/>
-  <object id="9" x="370" y="159" width="27.875" height="48.6875"/>
-  <object id="23" x="951.927" y="32.0417" width="32.0625" height="15.0625" rotation="-90"/>
-  <object id="25" x="967.104" y="29.9167" width="27.875" height="32.3542" rotation="-90"/>
-  <object id="26" x="1192.06" y="112.068" width="32.0625" height="15.0625" rotation="-180"/>
-  <object id="27" x="1192.01" y="175.121" width="32.0625" height="15.0625" rotation="-180"/>
-  <object id="28" x="1189.91" y="96.9562" width="27.875" height="97.0209" rotation="-180"/>
-  <object id="29" x="1189.93" y="207.533" width="27.875" height="32.3542" rotation="-180"/>
-  <object id="30" x="1565.96" y="80.9562" width="27.875" height="80.0209" rotation="-180"/>
-  <object id="31" x="1669.9" y="207.02" width="27.875" height="120.021" rotation="-180"/>
-  <object id="32" x="1568.1" y="96.0688" width="32.0625" height="15.0625" rotation="-180"/>
-  <object id="33" x="1672.11" y="87.0849" width="32.0625" height="15.0625" rotation="-180"/>
-  <object id="34" x="2944.3" y="78.893" width="32.0625" height="15.0625" rotation="-180"/>
-  <object id="35" x="3032.15" y="151.923" width="32.0625" height="15.0625" rotation="-180"/>
-  <object id="36" x="3128.15" y="87.9233" width="32.0625" height="15.0625" rotation="-180"/>
-  <object id="37" x="3128.15" y="159.014" width="32.0625" height="15.0625" rotation="-180"/>
-  <object id="38" x="3207.97" y="111.105" width="32.0625" height="15.0625" rotation="-180"/>
-  <object id="39" x="3207.97" y="32.1051" width="32.0625" height="15.0625" rotation="-180"/>
-  <object id="40" x="2941.81" y="207.558" width="27.875" height="128.521" rotation="-180"/>
-  <object id="41" x="3030.13" y="136.603" width="27.875" height="136.135" rotation="-180"/>
-  <object id="42" x="3126.04" y="72.5804" width="27.875" height="72.271" rotation="-180"/>
-  <object id="43" x="3126.06" y="207.74" width="27.875" height="48.3846" rotation="-180"/>
-  <object id="44" x="3206.06" y="207.626" width="27.875" height="96.3846" rotation="-180"/>
-  <object id="45" x="3205.73" y="16.9327" width="27.875" height="16.5096" rotation="-180"/>
+  <object id="8" x="368" y="143.993" width="32" height="14.9961"/>
+  <object id="9" x="370.004" y="158.992" width="27.9883" height="49.0078"/>
+  <object id="23" x="952.005" y="32.0026" width="32" height="14.9922" rotation="-90"/>
+  <object id="25" x="966.999" y="29.9948" width="27.9922" height="32.9948" rotation="-90"/>
+  <object id="26" x="1192.01" y="111.998" width="32.0039" height="14.9961" rotation="-180"/>
+  <object id="27" x="1192" y="174.996" width="32.0039" height="15" rotation="-180"/>
+  <object id="28" x="1189.99" y="96.9953" width="27.9883" height="96.9857" rotation="-180"/>
+  <object id="29" x="1190" y="207.998" width="28" height="33.0065" rotation="-180"/>
+  <object id="30" x="1566" y="80.9874" width="28" height="80.9897" rotation="-180"/>
+  <object id="31" x="1670" y="208" width="27.9922" height="120.998" rotation="-180"/>
+  <object id="32" x="1568" y="96" width="32.0039" height="15" rotation="-180"/>
+  <object id="33" x="1672" y="86.999" width="32.0078" height="15" rotation="-180"/>
+  <object id="34" x="2944" y="78.9946" width="32.0078" height="14.9961" rotation="-180"/>
+  <object id="35" x="3032.01" y="152.005" width="32.0117" height="15.0039" rotation="-180"/>
+  <object id="36" x="3128.01" y="88.0053" width="32.0039" height="15" rotation="-180"/>
+  <object id="37" x="3127.99" y="158.998" width="31.9922" height="14.9922" rotation="-180"/>
+  <object id="38" x="3208" y="110.996" width="32" height="14.9961" rotation="-180"/>
+  <object id="39" x="3208.01" y="31.9996" width="32.0039" height="15" rotation="-180"/>
+  <object id="40" x="2942" y="207.995" width="27.9961" height="128.99" rotation="-180"/>
+  <object id="41" x="3030" y="136.998" width="27.9922" height="136.998" rotation="-180"/>
+  <object id="42" x="3126" y="73.0101" width="27.9922" height="73.0093" rotation="-180"/>
+  <object id="43" x="3125.99" y="208.002" width="27.9844" height="49.0057" rotation="-180"/>
+  <object id="44" x="3206" y="208.005" width="28" height="97.0096" rotation="-180"/>
+  <object id="45" x="3206" y="16.9991" width="27.9961" height="17.0018" rotation="-180"/>
+ </objectgroup>
+ <objectgroup id="14" name="beer">
+  <object id="270" x="16" y="16" width="16" height="16"/>
+  <object id="271" x="432" y="64" width="16" height="16"/>
+  <object id="272" x="608" y="32" width="16" height="16"/>
+  <object id="273" x="776" y="168" width="16" height="16"/>
+  <object id="274" x="888" y="16" width="16" height="16"/>
+  <object id="275" x="1032" y="16" width="16" height="16"/>
+  <object id="276" x="1216" y="16" width="16" height="16"/>
+  <object id="277" x="1416" y="168" width="16" height="16"/>
+  <object id="278" x="1784" y="168" width="16" height="16"/>
+  <object id="279" x="1776" y="24" width="16" height="16"/>
+  <object id="280" x="2136" y="112" width="16" height="16"/>
+  <object id="281" x="2320" y="128" width="16" height="16"/>
+  <object id="282" x="2552" y="56" width="16" height="16"/>
+  <object id="283" x="2832" y="96" width="16" height="16"/>
+  <object id="284" x="3008" y="168" width="16" height="16"/>
+  <object id="285" x="3184" y="48" width="16" height="16"/>
+  <object id="286" x="3544" y="40" width="16" height="16"/>
+  <object id="287" x="3544" y="88" width="16" height="16"/>
+  <object id="288" x="3704" y="24" width="16" height="16"/>
  </objectgroup>
  <objectgroup id="5" name="brick">
-  <object id="10" x="288" y="120" width="15.913" height="16.0435"/>
-  <object id="11" x="304.043" y="119.978" width="15.913" height="16.0435"/>
-  <object id="12" x="192.134" y="159.978" width="15.913" height="16.0435"/>
-  <object id="19" x="320.043" y="119.978" width="15.913" height="16.0435"/>
-  <object id="20" x="336.043" y="120.228" width="15.913" height="16.0435"/>
-  <object id="46" x="208.225" y="159.948" width="15.913" height="16.0435"/>
-  <object id="47" x="224.225" y="160.16" width="15.913" height="16.0435"/>
-  <object id="48" x="224.134" y="176.251" width="15.913" height="16.0435"/>
-  <object id="49" x="224.043" y="191.978" width="15.913" height="16.0435"/>
-  <object id="50" x="560.195" y="55.9075" width="15.913" height="16.0435"/>
-  <object id="51" x="576.158" y="55.8853" width="15.913" height="16.0435"/>
-  <object id="52" x="592.072" y="55.9581" width="15.913" height="16.0435"/>
-  <object id="53" x="608.045" y="56.0268" width="15.913" height="16.0435"/>
-  <object id="54" x="560.225" y="103.887" width="15.913" height="16.0435"/>
-  <object id="55" x="575.953" y="104.069" width="15.913" height="16.0435"/>
-  <object id="56" x="591.862" y="103.978" width="15.913" height="16.0435"/>
-  <object id="57" x="736.035" y="143.92" width="15.913" height="16.0435"/>
-  <object id="58" x="752.124" y="144.006" width="15.913" height="16.0435"/>
-  <object id="59" x="768.115" y="143.992" width="15.913" height="16.0435"/>
-  <object id="60" x="784.093" y="143.992" width="15.913" height="16.0435"/>
-  <object id="61" x="800.093" y="143.984" width="15.913" height="16.0435"/>
-  <object id="62" x="800.043" y="160.228" width="15.913" height="16.0435"/>
-  <object id="63" x="800.293" y="176.228" width="15.913" height="16.0435"/>
-  <object id="64" x="799.918" y="191.978" width="15.913" height="16.0435"/>
-  <object id="65" x="872.027" y="111.994" width="15.913" height="16.0435"/>
-  <object id="66" x="872.043" y="127.994" width="15.913" height="16.0435"/>
-  <object id="67" x="872.043" y="144.009" width="15.913" height="16.0435"/>
-  <object id="68" x="872.027" y="160.072" width="15.913" height="16.0435"/>
-  <object id="69" x="872.027" y="175.916" width="15.913" height="16.0435"/>
-  <object id="70" x="872.012" y="192.009" width="15.913" height="16.0435"/>
-  <object id="71" x="872.043" y="63.97" width="15.913" height="16.0435"/>
-  <object id="72" x="872.043" y="47.8533" width="15.913" height="16.0435"/>
-  <object id="73" x="872.046" y="31.9727" width="15.913" height="16.0435"/>
-  <object id="74" x="888.054" y="31.9339" width="15.913" height="16.0435"/>
-  <object id="75" x="904.018" y="31.9561" width="15.913" height="16.0435"/>
-  <object id="76" x="919.974" y="31.9644" width="15.913" height="16.0435"/>
-  <object id="77" x="936.418" y="31.9783" width="15.913" height="16.0435"/>
-  <object id="78" x="952.168" y="31.9783" width="15.913" height="16.0435"/>
-  <object id="79" x="967.918" y="31.9644" width="15.913" height="16.0435"/>
-  <object id="80" x="984.051" y="31.9922" width="15.913" height="16.0435"/>
-  <object id="81" x="1000.02" y="31.9783" width="15.913" height="16.0435"/>
-  <object id="82" x="1000.06" y="15.9366" width="15.913" height="16.0435"/>
-  <object id="83" x="1000.04" y="-0.0884167" width="15.913" height="16.0435"/>
-  <object id="84" x="984.026" y="127.934" width="15.913" height="16.0435"/>
-  <object id="85" x="999.981" y="127.947" width="15.913" height="16.0435"/>
-  <object id="86" x="1016.04" y="128.028" width="15.913" height="16.0435"/>
-  <object id="87" x="1383.92" y="192.103" width="15.913" height="16.0435"/>
-  <object id="88" x="1384.17" y="176.228" width="15.913" height="16.0435"/>
-  <object id="89" x="1384.17" y="159.978" width="15.913" height="16.0435"/>
-  <object id="90" x="1384.17" y="144.353" width="15.913" height="16.0435"/>
-  <object id="91" x="1384.29" y="127.978" width="15.913" height="16.0435"/>
-  <object id="92" x="1400.42" y="128.103" width="15.913" height="16.0435"/>
-  <object id="93" x="1416.54" y="128.228" width="15.913" height="16.0435"/>
-  <object id="94" x="1432.17" y="128.103" width="15.913" height="16.0435"/>
-  <object id="95" x="1400.42" y="144.103" width="15.913" height="16.0435"/>
-  <object id="96" x="1416.42" y="144.353" width="15.913" height="16.0435"/>
-  <object id="97" x="1432.04" y="144.353" width="15.913" height="16.0435"/>
-  <object id="98" x="1447.79" y="87.9783" width="15.913" height="16.0435"/>
-  <object id="99" x="1447.79" y="103.978" width="15.913" height="16.0435"/>
-  <object id="100" x="1448.17" y="120.228" width="15.913" height="16.0435"/>
-  <object id="101" x="1448.29" y="136.478" width="15.913" height="16.0435"/>
-  <object id="102" x="1448.04" y="152.228" width="15.913" height="16.0435"/>
-  <object id="103" x="1823.97" y="143.937" width="16.113" height="64.0546"/>
-  <object id="104" x="1744.06" y="0.152163" width="15.913" height="103.862"/>
-  <object id="105" x="1760.2" y="87.9862" width="15.913" height="16.0435"/>
-  <object id="106" x="1775.98" y="88.0351" width="15.913" height="16.0435"/>
-  <object id="107" x="1791.96" y="87.981" width="15.913" height="16.0435"/>
-  <object id="108" x="1807.86" y="87.8873" width="15.913" height="16.0435"/>
-  <object id="109" x="1743.98" y="143.853" width="15.913" height="16.0435"/>
-  <object id="110" x="1759.98" y="143.916" width="15.913" height="16.0435"/>
-  <object id="111" x="1776.04" y="143.916" width="15.913" height="16.0435"/>
-  <object id="112" x="1792.04" y="143.791" width="15.913" height="16.0435"/>
-  <object id="113" x="1808.04" y="143.791" width="15.913" height="16.0435"/>
-  <object id="114" x="2040" y="63.7699" width="15.913" height="16.0435"/>
-  <object id="115" x="2024.17" y="120.103" width="15.913" height="16.0435"/>
-  <object id="116" x="2096.17" y="95.9783" width="15.913" height="16.0435"/>
-  <object id="117" x="2087.79" y="31.6033" width="15.913" height="16.0435"/>
-  <object id="118" x="2167.92" y="8.10325" width="15.913" height="16.0435"/>
-  <object id="119" x="2144.29" y="64.1033" width="15.913" height="16.0435"/>
-  <object id="120" x="2184.04" y="120.103" width="15.913" height="16.0435"/>
-  <object id="121" x="2072.01" y="151.978" width="15.913" height="16.0435"/>
-  <object id="122" x="2136.04" y="175.853" width="15.913" height="16.0435"/>
-  <object id="123" x="2032.04" y="192.103" width="15.913" height="16.0435"/>
-  <object id="124" x="2248.04" y="119.728" width="15.913" height="16.0435"/>
-  <object id="125" x="2231.98" y="64.001" width="15.913" height="16.0435"/>
-  <object id="126" x="2264.04" y="15.9783" width="15.913" height="16.0435"/>
-  <object id="127" x="2216.04" y="167.615" width="15.913" height="16.0435"/>
-  <object id="128" x="2304.01" y="88.0045" width="15.913" height="16.0435"/>
-  <object id="129" x="2320" y="175.978" width="15.913" height="16.0435"/>
-  <object id="130" x="2376.01" y="135.883" width="15.913" height="16.0435"/>
-  <object id="131" x="2368.08" y="55.9862" width="15.913" height="16.0435"/>
-  <object id="132" x="2432.04" y="96.0294" width="15.913" height="16.0435"/>
-  <object id="133" x="2432.09" y="8.03507" width="15.913" height="16.0435"/>
-  <object id="134" x="2624" y="79.9506" width="15.913" height="16.0435"/>
-  <object id="135" x="2640.15" y="64.0217" width="15.913" height="16.0435"/>
-  <object id="136" x="2655.91" y="48.0296" width="15.913" height="16.0435"/>
-  <object id="137" x="2624.08" y="111.883" width="15.913" height="16.0435"/>
-  <object id="138" x="2640.01" y="127.947" width="15.913" height="16.0435"/>
-  <object id="139" x="2656.13" y="143.947" width="15.913" height="16.0435"/>
-  <object id="140" x="2672.06" y="143.941" width="15.913" height="16.0435"/>
-  <object id="141" x="2688.06" y="143.978" width="15.913" height="16.0435"/>
-  <object id="142" x="2704.07" y="143.961" width="15.913" height="16.0435"/>
-  <object id="143" x="2720.02" y="143.941" width="15.913" height="16.0435"/>
-  <object id="144" x="2735.95" y="143.978" width="15.913" height="16.0435"/>
-  <object id="145" x="2751.98" y="143.978" width="15.913" height="16.0435"/>
-  <object id="146" x="2799.98" y="143.978" width="15.913" height="16.0435"/>
-  <object id="147" x="2783.98" y="144.041" width="15.913" height="16.0435"/>
-  <object id="148" x="2768.04" y="144.072" width="15.913" height="16.0435"/>
-  <object id="149" x="2815.96" y="128.065" width="15.913" height="16.0435"/>
-  <object id="150" x="2832.04" y="111.891" width="15.913" height="16.0435"/>
-  <object id="151" x="2832.04" y="80.0652" width="15.913" height="16.0435"/>
-  <object id="152" x="2816.04" y="64.1087" width="15.913" height="16.0435"/>
-  <object id="153" x="2800.04" y="47.8913" width="15.913" height="16.0435"/>
-  <object id="154" x="2784.13" y="47.9782" width="15.913" height="16.0435"/>
-  <object id="155" x="2768.04" y="47.9348" width="15.913" height="16.0435"/>
-  <object id="156" x="2752.04" y="47.8913" width="15.913" height="16.0435"/>
-  <object id="157" x="2736.04" y="47.9348" width="15.913" height="16.0435"/>
-  <object id="158" x="2720.09" y="47.9348" width="15.913" height="16.0435"/>
-  <object id="159" x="2704.09" y="47.9348" width="15.913" height="16.0435"/>
-  <object id="160" x="2688.04" y="47.9783" width="15.913" height="16.0435"/>
-  <object id="161" x="2672.09" y="47.9783" width="15.913" height="16.0435"/>
-  <object id="162" x="2672" y="95.9783" width="15.913" height="16.0435"/>
-  <object id="163" x="2687.96" y="96.0217" width="15.913" height="16.0435"/>
-  <object id="164" x="2704" y="96.0217" width="15.913" height="16.0435"/>
-  <object id="165" x="2720" y="95.9348" width="15.913" height="16.0435"/>
-  <object id="166" x="2735.91" y="95.9348" width="15.913" height="16.0435"/>
-  <object id="167" x="2751.96" y="95.9348" width="15.913" height="16.0435"/>
-  <object id="168" x="2768" y="95.9783" width="15.913" height="16.0435"/>
-  <object id="169" x="2784" y="95.9783" width="15.913" height="16.0435"/>
-  <object id="170" x="3312.01" y="16.0408" width="15.913" height="16.0435"/>
-  <object id="171" x="3328.01" y="16.0408" width="15.913" height="16.0435"/>
-  <object id="172" x="3343.98" y="16.0095" width="15.913" height="16.0435"/>
-  <object id="173" x="3360.04" y="16.0227" width="15.913" height="16.0435"/>
-  <object id="174" x="3376.15" y="16.0005" width="15.913" height="16.0435"/>
-  <object id="175" x="3392.07" y="16.0227" width="15.913" height="16.0435"/>
-  <object id="176" x="3407.98" y="15.9157" width="15.913" height="16.0435"/>
-  <object id="177" x="3423.86" y="15.9157" width="15.913" height="16.0435"/>
-  <object id="178" x="3440.04" y="15.9157" width="15.913" height="16.0435"/>
-  <object id="179" x="3440.17" y="-0.14675" width="15.913" height="16.0435"/>
-  <object id="180" x="3456.04" y="15.9157" width="15.913" height="16.0435"/>
-  <object id="181" x="3471.86" y="15.9157" width="15.913" height="16.0435"/>
-  <object id="182" x="3487.86" y="15.9782" width="15.913" height="16.0435"/>
-  <object id="183" x="3503.79" y="15.9782" width="15.913" height="16.0435"/>
-  <object id="184" x="3520.11" y="15.9782" width="15.913" height="16.0435"/>
-  <object id="185" x="3536.11" y="16.0407" width="15.913" height="16.0435"/>
-  <object id="186" x="3552.04" y="16.0407" width="15.913" height="16.0435"/>
-  <object id="187" x="3568.04" y="15.9782" width="15.913" height="16.0435"/>
-  <object id="188" x="3567.98" y="32.1033" width="15.913" height="16.0435"/>
-  <object id="189" x="3567.92" y="48.1033" width="15.913" height="16.0435"/>
-  <object id="190" x="3567.86" y="64.1033" width="15.913" height="16.0435"/>
-  <object id="191" x="3552.17" y="64.0408" width="15.913" height="16.0435"/>
-  <object id="192" x="3536.17" y="63.9783" width="15.913" height="16.0435"/>
-  <object id="193" x="3519.98" y="63.9783" width="15.913" height="16.0435"/>
-  <object id="194" x="3503.98" y="64.1033" width="15.913" height="16.0435"/>
-  <object id="195" x="3488.04" y="63.9783" width="15.913" height="16.0435"/>
-  <object id="196" x="3472.04" y="64.1033" width="15.913" height="16.0435"/>
-  <object id="197" x="3456.11" y="64.0408" width="15.913" height="16.0435"/>
-  <object id="198" x="3439.98" y="64.0408" width="15.913" height="16.0435"/>
-  <object id="199" x="3423.98" y="64.0408" width="15.913" height="16.0435"/>
-  <object id="200" x="3407.92" y="63.9158" width="15.913" height="16.0435"/>
-  <object id="201" x="3392.04" y="64.1033" width="15.913" height="16.0435"/>
-  <object id="202" x="3376.04" y="64.0408" width="15.913" height="16.0435"/>
-  <object id="203" x="3360.11" y="63.9783" width="15.913" height="16.0435"/>
-  <object id="204" x="3343.98" y="63.9783" width="15.913" height="16.0435"/>
-  <object id="205" x="3328.04" y="64.0408" width="15.913" height="16.0435"/>
-  <object id="206" x="3312.11" y="64.1033" width="15.913" height="16.0435"/>
-  <object id="207" x="3567.97" y="80.1667" width="15.913" height="16.0435"/>
-  <object id="208" x="3568.04" y="96.1956" width="15.913" height="16.0435"/>
-  <object id="209" x="3568" y="112.022" width="15.913" height="16.0435"/>
-  <object id="210" x="3551.91" y="111.978" width="15.913" height="16.0435"/>
-  <object id="211" x="3535.96" y="111.891" width="15.913" height="16.0435"/>
-  <object id="212" x="3520" y="112.022" width="15.913" height="16.0435"/>
-  <object id="213" x="3504.04" y="111.978" width="15.913" height="16.0435"/>
-  <object id="214" x="3488" y="111.935" width="15.913" height="16.0435"/>
-  <object id="215" x="3472" y="111.978" width="15.913" height="16.0435"/>
-  <object id="216" x="3456.04" y="111.935" width="15.913" height="16.0435"/>
-  <object id="217" x="3439.96" y="112.022" width="15.913" height="16.0435"/>
-  <object id="218" x="3423.96" y="112.022" width="15.913" height="16.0435"/>
-  <object id="219" x="3408" y="112.065" width="15.913" height="16.0435"/>
-  <object id="220" x="3392" y="112.022" width="15.913" height="16.0435"/>
-  <object id="221" x="3376.04" y="112.022" width="15.913" height="16.0435"/>
-  <object id="222" x="3360.04" y="112.065" width="15.913" height="16.0435"/>
-  <object id="223" x="3344.04" y="111.978" width="15.913" height="16.0435"/>
-  <object id="224" x="3327.96" y="112.065" width="15.913" height="16.0435"/>
-  <object id="225" x="3312.13" y="112.022" width="15.913" height="16.0435"/>
-  <object id="226" x="3312.04" y="159.853" width="15.913" height="16.0435"/>
-  <object id="227" x="3328.04" y="159.978" width="15.913" height="16.0435"/>
-  <object id="228" x="3343.98" y="160.041" width="15.913" height="16.0435"/>
-  <object id="229" x="3359.98" y="160.041" width="15.913" height="16.0435"/>
-  <object id="230" x="3375.98" y="160.01" width="15.913" height="16.0435"/>
-  <object id="231" x="3392.01" y="160.041" width="15.913" height="16.0435"/>
-  <object id="232" x="3408.04" y="160.041" width="15.913" height="16.0435"/>
-  <object id="233" x="3424.01" y="159.947" width="15.913" height="16.0435"/>
-  <object id="234" x="3440.07" y="160.01" width="15.913" height="16.0435"/>
-  <object id="235" x="3440.01" y="176.041" width="15.913" height="16.0435"/>
-  <object id="236" x="3440.07" y="191.978" width="15.913" height="16.0435"/>
-  <object id="237" x="3456.04" y="159.978" width="15.913" height="16.0435"/>
-  <object id="238" x="3472.07" y="160" width="15.913" height="16.0435"/>
-  <object id="239" x="3488.02" y="159.956" width="15.913" height="16.0435"/>
-  <object id="240" x="3504.09" y="159.978" width="15.913" height="16.0435"/>
-  <object id="241" x="3520.11" y="159.978" width="15.913" height="16.0435"/>
-  <object id="242" x="3536.02" y="160.023" width="15.913" height="16.0435"/>
-  <object id="243" x="3552.09" y="160.045" width="15.913" height="16.0435"/>
-  <object id="244" x="3647.95" y="48.0227" width="15.913" height="16.0435"/>
-  <object id="245" x="3663.96" y="48.0217" width="15.913" height="16.0435"/>
-  <object id="246" x="3680.09" y="48.0217" width="15.913" height="16.0435"/>
-  <object id="247" x="3696.13" y="47.9782" width="15.913" height="16.0435"/>
-  <object id="248" x="3712.17" y="48.0217" width="15.913" height="16.0435"/>
-  <object id="249" x="3728" y="48.0217" width="15.913" height="16.0435"/>
-  <object id="250" x="3743.96" y="48.0217" width="15.913" height="16.0435"/>
-  <object id="251" x="3760" y="48.0652" width="15.913" height="16.0435"/>
+  <object id="10" x="288" y="120" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="11" x="304" y="120" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="12" x="192" y="160" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="19" x="320" y="120" width="15.995" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="20" x="336" y="120" width="16.0068" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="46" x="208" y="160" width="15.995" height="15.9966"/>
+  <object id="47" x="224" y="160" width="16.0068" height="16.0005"/>
+  <object id="48" x="224" y="176" width="15.9989" height="16.0044"/>
+  <object id="49" x="224" y="192" width="15.995" height="15.9927"/>
+  <object id="50" x="560.004" y="55.9973" width="15.9911" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="51" x="575.994" y="56.0025" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="52" x="591.99" y="56.005" width="16.0146" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="53" x="608.01" y="56.0073" width="15.9911" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="54" x="560.002" y="104" width="16.0028" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="55" x="576.004" y="104.007" width="15.995" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="56" x="592.003" y="103.998" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="57" x="735.996" y="143.998" width="16.0028" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="58" x="752.007" y="143.994" width="15.9872" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="59" x="768.002" y="143.996" width="15.9872" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="60" x="783.995" y="143.996" width="16.0028" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="61" x="799.995" y="144" width="16.0107" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="62" x="800.004" y="160.005" width="15.995" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="63" x="800" y="175.998" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="64" x="800.004" y="191.99" width="15.9989" height="16.0122">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="65" x="871.996" y="112.006" width="15.9989" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="66" x="872.004" y="128.002" width="15.995" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="67" x="871.996" y="143.993" width="16.0028" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="68" x="872.004" y="160.002" width="15.9989" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="69" x="871.996" y="175.994" width="16.0028" height="16.0162">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="70" x="872.004" y="192.001" width="15.995" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="71" x="872" y="63.9973" width="16.0028" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="72" x="872.008" y="47.9978" width="15.9872" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="73" x="871.999" y="32" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="74" x="887.999" y="32.0042" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="75" x="904.002" y="32.0069" width="15.9911" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="76" x="919.997" y="32.0074" width="15.9989" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="77" x="936" y="31.9978" width="16.0028" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="78" x="952.008" y="32.0056" width="15.9872" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="79" x="968" y="31.9996" width="16.0028" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="80" x="984" y="32.0039" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="81" x="1000" y="31.9939" width="15.9989" height="16.0083">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="82" x="999.997" y="15.9991" width="16.0028" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="83" x="1000" y="0.00142705" width="16.0028" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="84" x="984.026" y="127.934" width="15.913" height="16.0435">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="85" x="999.981" y="127.947" width="15.913" height="16.0435">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="86" x="1016.04" y="128.028" width="15.913" height="16.0435">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="87" x="1384.01" y="191.998" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="88" x="1384" y="176.005" width="16.0028" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="89" x="1384" y="160.005" width="16.0028" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="90" x="1384.01" y="144.005" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="91" x="1384" y="127.998" width="16.0068" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="92" x="1400.01" y="128.001" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="93" x="1416" y="128.005" width="15.9911" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="94" x="1431.99" y="128.001" width="16.0028" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="95" x="1400.01" y="144.005" width="15.9911" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="96" x="1416.01" y="143.998" width="15.9872" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="97" x="1432" y="144.001" width="15.9872" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="98" x="1448" y="87.9978" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="99" x="1448" y="104.001" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="100" x="1448.01" y="120.001" width="15.9872" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="101" x="1448" y="136.001" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="102" x="1448" y="151.998" width="15.995" height="16.0083">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="103" x="1824" y="144" width="16.0075" height="64.0038">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="104" x="1744.01" y="-0.00018075" width="15.9911" height="103.999">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="105" x="1760" y="87.994" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="106" x="1776" y="87.996" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="107" x="1792.01" y="87.9966" width="15.9833" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="108" x="1807.99" y="87.9928" width="16.0068" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="109" x="1744" y="144.005" width="15.9911" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="110" x="1760" y="143.994" width="15.9911" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="111" x="1776" y="143.998" width="15.9872" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="112" x="1792" y="143.994" width="16.0028" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="113" x="1808" y="143.994" width="15.9872" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="114" x="2040" y="63.9965" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="115" x="2024.01" y="119.994" width="15.9911" height="16.0083">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="116" x="2096.01" y="96.0017" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="117" x="2088" y="32.0056" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="118" x="2167.99" y="7.99778" width="15.9989" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="119" x="2144" y="63.9978" width="16.0068" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="120" x="2184" y="120.001" width="15.9911" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="121" x="2072" y="151.998" width="15.9989" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="122" x="2136.01" y="175.998" width="15.9911" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="123" x="2032" y="192.001" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="124" x="2248" y="120.001" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="125" x="2232" y="64.001" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="126" x="2264" y="15.9978" width="15.995" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="127" x="2215.99" y="167.994" width="16.0107" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="128" x="2304.01" y="88.0045" width="15.9872" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="129" x="2320" y="176.001" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="130" x="2376.01" y="136" width="15.9911" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="131" x="2368.01" y="55.994" width="15.9911" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="132" x="2432" y="96.0021" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="133" x="2432" y="7.99601" width="16.0028" height="16.0083">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="134" x="2624" y="72" width="15.9989" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="135" x="2640" y="56" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="136" x="2656" y="40" width="16.0028" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="137" x="2624" y="120" width="15.9872" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="138" x="2640" y="136" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="139" x="2656" y="152" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="140" x="2672" y="152" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="141" x="2688" y="152" width="15.995" height="16.0162">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="142" x="2704" y="152" width="15.9911" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="143" x="2720" y="152" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="144" x="2736" y="152" width="15.9911" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="145" x="2752" y="152" width="16.0028" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="146" x="2800" y="152" width="16.0028" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="147" x="2784" y="152" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="148" x="2768" y="152" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="149" x="2816" y="136" width="15.995" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="150" x="2832" y="120" width="15.995" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="151" x="2832" y="72" width="15.995" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="152" x="2816" y="56" width="15.9833" height="15.9849">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="153" x="2800" y="40" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="154" x="2784" y="40" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="155" x="2768" y="40" width="15.9872" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="156" x="2752" y="40" width="16.0068" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="157" x="2736" y="40" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="158" x="2720" y="40" width="15.9872" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="159" x="2704" y="40" width="15.9872" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="160" x="2688" y="40" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="161" x="2672" y="40" width="15.9911" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="162" x="2672" y="96.0056" width="16.0028" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="163" x="2688" y="96.0061" width="15.9989" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="164" x="2704" y="95.9983" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="165" x="2720" y="95.9973" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="166" x="2736" y="95.9949" width="15.9908" height="15.9991">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="167" x="2752" y="96.0012" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="168" x="2768" y="96.0056" width="15.995" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="169" x="2784" y="96.0017" width="16.0028" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="170" x="3312" y="16.0017" width="16.0068" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="171" x="3328" y="16.0017" width="16.0028" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="172" x="3344" y="15.9978" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="173" x="3360" y="16.0032" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="174" x="3376" y="15.9927" width="16.0028" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="175" x="3392" y="15.9954" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="176" x="3408" y="16.0016" width="16.0028" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="177" x="3424" y="16.0016" width="16.0028" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="178" x="3440.01" y="15.9977" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="179" x="3440.01" y="0.0016875" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="180" x="3456.01" y="16.0016" width="15.9911" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="181" x="3472" y="16.0016" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="182" x="3488" y="16.0016" width="15.9911" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="183" x="3504" y="16.0016" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="184" x="3520" y="16.0055" width="15.9989" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="185" x="3536" y="16.0016" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="186" x="3552.01" y="15.9977" width="15.9911" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="187" x="3568" y="15.9938" width="16.0028" height="16.0123">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="188" x="3568" y="32.0095" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="189" x="3568" y="48.0017" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="190" x="3568.01" y="64.0056" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="191" x="3552.01" y="64.0056" width="16.0028" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="192" x="3536" y="64.0017" width="16.0028" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="193" x="3520" y="63.9978" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="194" x="3504.01" y="64.0017" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="195" x="3488" y="64.0017" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="196" x="3472.01" y="64.0017" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="197" x="3456" y="64.0017" width="16.0028" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="198" x="3440.01" y="64.0017" width="15.995" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="199" x="3424" y="63.9978" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="200" x="3408" y="64.0017" width="16.0028" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="201" x="3392" y="64.0017" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="202" x="3376.01" y="63.9978" width="15.9872" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="203" x="3360" y="63.9978" width="16.0028" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="204" x="3344.01" y="63.9978" width="15.9872" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="205" x="3328.01" y="63.9939" width="15.9989" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="206" x="3312" y="64.0017" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="207" x="3568" y="80.0065" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="208" x="3568" y="96.0042" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="209" x="3568.01" y="112.002" width="15.9872" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="210" x="3552" y="112.001" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="211" x="3536" y="111.996" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="212" x="3520" y="111.999" width="15.9872" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="213" x="3504" y="112.001" width="15.995" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="214" x="3488" y="112.001" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="215" x="3472" y="111.998" width="16.0068" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="216" x="3456" y="111.998" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="217" x="3440.01" y="111.999" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="218" x="3424" y="112.002" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="219" x="3408" y="111.999" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="220" x="3392" y="111.999" width="15.995" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="221" x="3376" y="112.002" width="16.0028" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="222" x="3360.01" y="111.999" width="15.9872" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="223" x="3344" y="112.001" width="16.0028" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="224" x="3328" y="112.006" width="15.995" height="15.9888">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="225" x="3312.01" y="112.002" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="226" x="3312" y="159.998" width="15.9989" height="16.0083">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="227" x="3328" y="160.001" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="228" x="3344" y="160.002" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="229" x="3360" y="160.002" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="230" x="3376" y="160.002" width="16.0068" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="231" x="3392.01" y="160.006" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="232" x="3408" y="160.006" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="233" x="3424" y="160.002" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="234" x="3440" y="159.994" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="235" x="3440" y="175.998" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="236" x="3440.01" y="192.001" width="15.9872" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="237" x="3456" y="159.998" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="238" x="3472" y="160.004" width="16.0068" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="239" x="3488" y="159.999" width="15.9911" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="240" x="3504" y="160.001" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="241" x="3520" y="159.998" width="15.9911" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="242" x="3536" y="160.003" width="16.0028" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="243" x="3552" y="160.002" width="15.995" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="244" x="3648" y="47.9954" width="16.0028" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="245" x="3664.01" y="48.0022" width="16.0028" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="246" x="3680" y="47.9983" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="247" x="3696.01" y="47.9938" width="15.995" height="16.0044">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="248" x="3712.01" y="47.9944" width="15.9989" height="15.9966">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="249" x="3728.01" y="47.9944" width="15.995" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="250" x="3744" y="47.9983" width="15.9989" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="251" x="3760.01" y="47.9988" width="15.9872" height="16.0005">
+   <properties>
+    <property name="destroyable" type="bool" value="false"/>
+    <property name="gift" type="bool" value="true"/>
+   </properties>
+  </object>
+  <object id="253" x="96" y="80" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="254" x="96" y="64" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="255" x="96" y="48" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="256" x="96" y="32" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="257" x="80" y="32" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="258" x="64.0126" y="32.0001" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="259" x="48" y="32" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="260" x="32" y="32" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="261" x="16" y="32" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
+  <object id="262" x="0" y="32" width="15.9989" height="15.9927">
+   <properties>
+    <property name="destroyable" type="bool" value="true"/>
+    <property name="gift" type="bool" value="false"/>
+   </properties>
+  </object>
  </objectgroup>
+ <objectgroup id="10" name="gap">
+  <object id="268" x="0" y="0" width="3840" height="8"/>
+  <object id="269" x="0" y="200" width="3840" height="8"/>
+ </objectgroup>
+ <objectgroup id="11" name="begin">
+  <object id="264" x="-0.00142096" y="0" width="8.00284" height="176"/>
+  <object id="267" x="3832" y="0" width="8.00284" height="176"/>
+ </objectgroup>
+ <objectgroup id="13" name="end"/>
 </map>
