@@ -29,7 +29,7 @@ public abstract class Map extends Graphics{
     ModelBase endCollider;
     
     public Map() {
-        map = mapLoader.load(mapDir + "1.tmx");
+        map = mapLoader.load(mapDir + "2.tmx");
         renderer = new OrthogonalTiledMapRenderer(map, 2);
         fixDef = new FixtureDef();
         shape = new PolygonShape();
